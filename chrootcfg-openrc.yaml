@@ -221,6 +221,7 @@
        - lxqt-runner
        - lxqt-session
        - lxqt-sudo
+       - obconf-qt
        - openbox
        - pcmanfm-qt
        - displaymanager-openrc

@@ -64,7 +64,7 @@
   selected: true
   packages:
         - linux44
-        
+
 - name: "boot"
   description: "Bootloader packages"
   hidden: true
@@ -83,7 +83,7 @@
         - avahi
         - ntp
         - rsync
-       
+
 - name: "base-devel"
   description: "Development packages"
   hidden: false
@@ -215,6 +215,7 @@
        - lxqt-runner
        - lxqt-session
        - lxqt-sudo
+       - obconf-qt
        - openbox
        - pcmanfm-qt
        - sddm
