@@ -65,7 +65,7 @@
   hidden: true
   selected: true
   packages:
-        - linux44
+        - linux49
 
 - name: "boot"
   description: "Bootloader packages"
@@ -209,6 +209,7 @@
   packages:
        - lximage-qt
        - lxqt-about
+       - lxqt-admin
        - lxqt-common
        - lxqt-config
        - lxqt-globalkeys
