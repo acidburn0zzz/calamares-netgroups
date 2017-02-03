@@ -7,6 +7,7 @@
        - bzip2
        - coreutils
        - cryptsetup-openrc
+       - dbus-openrc
        - device-mapper-openrc
        - dhcpcd-openrc
        - diffutils
@@ -76,9 +77,19 @@
         - os-prober
         - memtest86+
 
+- name: "openrc"
+  description: "Openrc packages"
+  hidden: true
+  selected: true
+  packages:
+        - dbus-openrc
+        - cgmanager-openrc
+        - consolekit-openrc
+        - acpid-openrc
+
 - name: "network"
   description: "Network packages"
-  hidden: true
+  hidden: false
   selected: true
   packages:
         - networkmanager-consolekit
@@ -115,6 +126,14 @@
         - texinfo
         - util-linux
         - which
+
+- name: "System utilities"
+  description: "System packages"
+  selected: false
+  hidden: false
+  packages:
+        - syslog-ng-openrc
+        - cronie-openrc
 
 - name: "plymouth"
   description: "Plymouth"
@@ -229,3 +248,4 @@
        - sddm-consolekit
        - qterminal
        - kwrite
+       - manjaro-lxqt-minimal-settings
