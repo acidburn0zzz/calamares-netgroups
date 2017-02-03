@@ -76,7 +76,7 @@
 
 - name: "network"
   description: "Network packages"
-  hidden: true
+  hidden: false
   selected: true
   packages:
         - networkmanager
@@ -222,6 +222,7 @@
        - sddm
        - qterminal
        - kwrite
+       - manjaro-lxqt-minimal-settings
 
 - name: 'gnome'
   description: 'gnome'
