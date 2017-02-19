@@ -1,5 +1,8 @@
 - name: "base-devel"
-  description: "Development packages"
+  description: "Development packages assumed installed for making packages"
+  selected: false
+  hidden: false
+  critical: false
   packages:
         - autoconf
         - automake
@@ -28,22 +31,71 @@
 
 - name: "util"
   description: "Utilities packages"
+  selected: false
+  hidden: false
+  critical: false
   packages:
         - yaourt
+        - manjaro-tools-base
 
-- name: "multimedia"
-  description: "Multimedia packages"
+- name: 'gnome-extra'
+  description: 'Gnome extra group packages'
+  selected: false
+  hidden: false
+  critical: false
   packages:
-        - vlc
-
-- name: "steam"
-  description: "Steam packages"
-  packages:
-        - steam-manjaro
-
-- name: "java"
-  description: "Java packages"
-  packages:
-        - jre8-openjdk
-        - jre8-openjdk-headless
-        - icedtea-web
+        - accerciser
+       - aisleriot
+       - anjuta
+       - atomix
+       - brasero
+       - cheese
+       - devhelp
+       - evolution
+       - file-roller
+       - five-or-more
+       - four-in-a-row
+       - gedit
+       - gedit-code-assistance
+       - gitg
+       - gnome-2048
+       - gnome-builder
+       - gnome-calendar
+       - gnome-characters
+       - gnome-chess
+       - gnome-clocks
+       - gnome-code-assistance
+       - gnome-color-manager
+       - gnome-devel-docs
+       - gnome-documents
+       - gnome-getting-started-docs
+       - gnome-klotski
+       - gnome-logs
+       - gnome-mahjongg
+       - gnome-maps
+       - gnome-mines
+       - gnome-music
+       - gnome-nettool
+       - gnome-nibbles
+       - gnome-photos
+       - gnome-robots
+       - gnome-sound-recorder
+       - gnome-sudoku
+       - gnome-taquin
+       - gnome-tetravex
+       - gnome-todo
+       - gnome-tweak-tool
+       - gnome-weather
+       - hitori
+       - iagno
+       - libgnome-games-support
+       - lightsoff
+       - nautilus-sendto
+       - orca
+       - polari
+       - quadrapassel
+       - rygel
+       - seahorse
+       - swell-foop
+       - tali
+       - vinagre
