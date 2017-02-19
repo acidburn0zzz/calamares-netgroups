@@ -1,5 +1,8 @@
 - name: "base-devel"
-  description: "Development packages"
+  description: "Development packages assumed installed for making packages"
+  selected: false
+  hidden: false
+  critical: false
   packages:
         - autoconf
         - automake
@@ -28,22 +31,25 @@
 
 - name: "util"
   description: "Utilities packages"
+  selected: false
+  hidden: false
+  critical: false
   packages:
         - yaourt
+        - manjaro-tools-base
 
-- name: "multimedia"
-  description: "Multimedia packages"
+- name: 'lxqt-extra'
+  description: 'Lxqt extra packages'
+  selected: false
+  hidden: false
+  critical: false
   packages:
-        - vlc
-
-- name: "steam"
-  description: "Steam packages"
-  packages:
-        - steam-manjaro
-
-- name: "java"
-  description: "Java packages"
-  packages:
-        - jre8-openjdk
-        - jre8-openjdk-headless
-        - icedtea-web
+       - lximage-qt
+       - octopi
+       - octopi-notifier-qt5
+       - octopi-cachecleaner
+       - octopi-repoeditor
+       - qupzilla
+       - vlc
+       - qpdfview
+       - manjaro-lxqt-extra-settings

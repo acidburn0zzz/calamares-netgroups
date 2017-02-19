@@ -1,0 +1,174 @@
+- name: "base"
+  description: "Command line interface"
+  hidden: true
+  selected: true
+  critical: false
+  packages:
+       - bash
+       - bzip2
+       - coreutils
+       - cryptsetup
+       - device-mapper
+       - dhcpcd
+       - diffutils
+       - e2fsprogs
+       - file
+       - filesystem
+       - findutils
+       - gawk
+       - gcc-libs
+       - gettext
+       - glibc
+       - grep
+       - gzip
+       - inetutils
+       - iproute2
+       - iputils
+       - jfsutils
+       - less
+       - licenses
+       - logrotate
+       - lvm2
+       - man-db
+       - man-pages
+       - manjaro-system
+       - mdadm
+       - mhwd
+       - mhwd-db
+       - nano
+       - netctl
+       - pacman
+       - pciutils
+       - pcmciautils
+       - perl
+       - procps-ng
+       - psmisc
+       - reiserfsprogs
+       - s-nail
+       - sed
+       - shadow
+       - sudo
+       - sysfsutils
+       - systemd-sysvcompat
+       - tar
+       - texinfo
+       - usbutils
+       - util-linux
+       - vi
+       - which
+       - xfsprogs
+       - tcp_wrappers
+
+- name: "kernel"
+  description: "Kernel packages"
+  hidden: true
+  selected: true
+  critical: false
+  packages:
+        - linux49
+
+- name: "boot"
+  description: "Bootloader packages"
+  hidden: true
+  selected: true
+  critical: false
+  packages:
+        - grub
+        - os-prober
+        - memtest86+
+
+- name: "network"
+  description: "Network packages"
+  hidden: false
+  selected: true
+  critical: false
+  packages:
+        - networkmanager
+        - avahi
+        - ntp
+        - rsync
+        - bluez
+
+- name: "base-devel"
+  description: "Development packages"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+        - autoconf
+        - automake
+        - binutils
+        - bison
+        - fakeroot
+        - file
+        - findutils
+        - flex
+        - gawk
+        - gcc
+        - gettext
+        - grep
+        - groff
+        - gzip
+        - libtool
+        - m4
+        - make
+        - patch
+        - pkg-config
+        - sed
+        - texinfo
+        - util-linux
+        - which
+
+- name: "plymouth"
+  description: "Plymouth"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+        - plymouth-theme-manjaro-elegant
+
+- name: 'lxqt-basic'
+  description: 'lxqt basic'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - lxqt-about
+       - lxqt-admin
+       - lxqt-common
+       - lxqt-config
+       - lxqt-globalkeys
+       - lxqt-notificationd
+       - lxqt-openssh-askpass
+       - lxqt-panel
+       - lxqt-policykit
+       - lxqt-powermanagement
+       - lxqt-qtplugin
+       - lxqt-runner
+       - lxqt-session
+       - lxqt-sudo
+       - obconf-qt
+       - openbox
+       - pcmanfm-qt
+       - gvfs
+       - qterminal
+       - juffed-qt5
+       - compton
+       - manjaro-lxqt-basic-settings
+       - sddm-qt-manjaro-theme
+
+- name: 'lxqt-extra'
+  description: 'lxqt extra'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - lximage-qt
+       - octopi
+       - octopi-notifier-qt5
+       - octopi-cachecleaner
+       - octopi-repoeditor
+       - qupzilla
+       - vlc
+       - qpdfview
+       - manjaro-lxqt-extra-settings

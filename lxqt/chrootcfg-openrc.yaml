@@ -1,0 +1,190 @@
+- name: "base"
+  description: "Command line interface"
+  hidden: true
+  selected: true
+  critical: false
+  packages:
+       - bash
+       - bzip2
+       - coreutils
+       - cryptsetup-openrc
+       - device-mapper-openrc
+       - dhcpcd-openrc
+       - diffutils
+       - e2fsprogs
+       - file
+       - filesystem
+       - findutils
+       - gawk
+       - gcc-libs
+       - gettext
+       - glibc-openrc
+       - grep
+       - gzip
+       - inetutils-openrc
+       - iproute2
+       - iputils
+       - jfsutils
+       - less
+       - libeudev-systemd
+       - licenses
+       - logrotate
+       - lvm2-openrc
+       - man-db
+       - man-pages
+       - manjaro-system
+       - mdadm-openrc
+       - mhwd
+       - mhwd-db
+       - nano
+       - netifrc
+       - pacman
+       - pciutils
+       - pcmciautils
+       - perl
+       - procps-ng
+       - psmisc
+       - reiserfsprogs
+       - s-nail
+       - sed
+       - shadow
+       - sudo
+       - sysfsutils
+       - eudev-systemd
+       - tar
+       - texinfo
+       - udev-openrc
+       - usbutils
+       - util-linux
+       - vi
+       - which
+       - xfsprogs
+       - tcp_wrappers
+
+- name: "kernel"
+  description: "Kernel packages"
+  hidden: true
+  selected: true
+  critical: false
+  packages:
+        - linux49
+
+- name: "boot"
+  description: "Bootloader packages"
+  hidden: true
+  selected: true
+  critical: false
+  packages:
+        - grub
+        - os-prober
+        - memtest86+
+
+- name: "openrc"
+  description: "Openrc packages"
+  hidden: true
+  selected: true
+  critical: false
+  packages:
+        - dbus-openrc
+        - cgmanager-openrc
+        - consolekit-openrc
+        - acpid-openrc
+        - syslog-ng-openrc
+        - cronie-openrc
+
+- name: "network"
+  description: "Network packages"
+  hidden: false
+  selected: true
+  critical: false
+  packages:
+        - networkmanager-consolekit
+        - networkmanager-openrc
+        - avahi-openrc
+        - ntp-openrc
+        - rsync-openrc
+        - bluez-openrc
+
+- name: "base-devel"
+  description: "Development packages"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+        - autoconf
+        - automake
+        - binutils
+        - bison
+        - fakeroot
+        - file
+        - findutils
+        - flex
+        - gawk
+        - gcc
+        - gettext
+        - grep
+        - groff
+        - gzip
+        - libtool
+        - m4
+        - make
+        - patch
+        - pkg-config
+        - sed
+        - texinfo
+        - util-linux
+        - which
+
+- name: "plymouth"
+  description: "Plymouth"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+        - plymouth-theme-manjaro-elegant
+
+- name: 'lxqt-basic'
+  description: 'lxqt basic'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - lxqt-about
+       - lxqt-admin
+       - lxqt-common
+       - lxqt-config
+       - lxqt-globalkeys
+       - lxqt-notificationd
+       - lxqt-openssh-askpass
+       - lxqt-panel
+       - lxqt-policykit
+       - lxqt-powermanagement
+       - lxqt-qtplugin
+       - lxqt-runner
+       - lxqt-session
+       - lxqt-sudo
+       - obconf-qt
+       - openbox
+       - pcmanfm-qt
+       - gvfs
+       - qterminal
+       - juffed-qt5
+       - compton
+       - manjaro-lxqt-basic-settings
+       - sddm-qt-manjaro-theme
+
+- name: 'lxqt-extra'
+  description: 'lxqt extra'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - lximage-qt
+       - octopi
+       - octopi-notifier-qt5
+       - octopi-cachecleaner
+       - octopi-repoeditor
+       - qupzilla
+       - vlc
+       - qpdfview
+       - manjaro-lxqt-extra-settings
