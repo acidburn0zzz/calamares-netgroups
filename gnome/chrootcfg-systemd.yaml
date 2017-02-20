@@ -125,8 +125,8 @@
   selected: false
   critical: false
   packages:
-	- plymouth-legacy        
-	- plymouth-theme-manjaro-gnome-17.0
+        - plymouth-legacy
+        - plymouth-theme-manjaro-gnome-17.0
 
 - name: 'gnome-basic'
   description: 'gnome basic'
