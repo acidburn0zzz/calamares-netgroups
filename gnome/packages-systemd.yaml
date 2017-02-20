@@ -44,7 +44,7 @@
   hidden: false
   critical: false
   packages:
-        - accerciser
+       - accerciser
        - aisleriot
        - anjuta
        - atomix
