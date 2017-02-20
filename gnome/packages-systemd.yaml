@@ -38,6 +38,27 @@
         - yaourt
         - manjaro-tools-base
 
+- name: 'gnome-extra-manjaro'
+  description: 'gnome extra packages suggested'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - libreoffice-fresh
+       - thunderbird
+       - lollypop
+       - empathy
+       - uget
+       - transmission-gtk
+       - brasero
+       - manjaro-documentation
+       - jre8-openjdk
+       - jre8-openjdk-headless
+       - flashplugin
+       - libdvdcss
+       - steam-manjaro
+       - manjaro-printer
+
 - name: 'gnome-extra'
   description: 'Gnome extra group packages'
   selected: false
