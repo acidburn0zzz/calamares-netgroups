@@ -38,6 +38,14 @@
         - yaourt
         - manjaro-tools-base
 
+- name: "plymouth"
+  description: "Plymouth"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+        - plymouth-theme-manjaro-elegant
+
 - name: 'lxqt-extra'
   description: 'Lxqt extra packages'
   selected: false
