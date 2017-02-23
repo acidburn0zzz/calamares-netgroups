@@ -91,6 +91,7 @@
         - acpid-openrc
         - syslog-ng-openrc
         - cronie-openrc
+        - pm-utils
 
 - name: "network"
   description: "Network packages"
@@ -143,6 +144,15 @@
   packages:
         - plymouth-theme-manjaro-elegant
 
+- name: "displaymanager"
+  description: "Displaymanager"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+        - sddm-consolekit
+        - sddm-qt-manjaro-theme
+
 - name: 'lxqt-basic'
   description: 'lxqt basic'
   selected: false
@@ -171,7 +181,6 @@
        - juffed-qt5
        - compton
        - manjaro-lxqt-basic-settings
-       - sddm-qt-manjaro-theme
 
 - name: 'lxqt-extra'
   description: 'lxqt extra'
