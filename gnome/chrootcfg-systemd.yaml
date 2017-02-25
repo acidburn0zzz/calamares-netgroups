@@ -252,8 +252,8 @@
        - xorg-utils
        - xorg-xinit
        - yelp
-- name: 'gnome-extra'
-  description: 'gnome extra'
+- name: 'gnome-extra-manjaro'
+  description: 'gnome extra packages suggested'
   selected: false
   hidden: false
   critical: false
