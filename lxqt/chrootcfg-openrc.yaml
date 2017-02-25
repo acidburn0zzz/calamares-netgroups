@@ -107,7 +107,7 @@
         - bluez-openrc
 
 - name: "base-devel"
-  description: "Development packages"
+  description: "Development packages assumed installed for making packages"
   hidden: false
   selected: false
   critical: false
@@ -143,6 +143,15 @@
   critical: false
   packages:
         - plymouth-theme-manjaro-elegant
+
+- name: "util"
+  description: "Utilities packages"
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+        - yaourt
+        - manjaro-tools-base
 
 - name: "displaymanager"
   description: "Displaymanager"
