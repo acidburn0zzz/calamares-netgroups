@@ -38,6 +38,15 @@
         - yaourt
         - manjaro-tools-base
 
+- name: "plymouth"
+  description: "Plymouth"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+        - plymouth-legacy
+        - plymouth-theme-manjaro-gnome-17.0
+
 - name: 'gnome-extra-manjaro'
   description: 'gnome extra packages suggested'
   selected: false
