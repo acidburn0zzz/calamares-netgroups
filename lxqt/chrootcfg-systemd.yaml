@@ -144,6 +144,7 @@
   packages:
         - sddm
         - sddm-qt-manjaro-theme
+        - xorg-server
 
 - name: 'lxqt-basic'
   description: 'lxqt basic'

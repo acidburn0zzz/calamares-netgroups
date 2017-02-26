@@ -159,6 +159,7 @@
   selected: false
   critical: false
   packages:
+        - displaymanager-openrc
         - sddm-consolekit
         - sddm-qt-manjaro-theme
 
