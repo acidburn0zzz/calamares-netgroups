@@ -92,6 +92,7 @@
         - syslog-ng-openrc
         - cronie-openrc
         - pm-utils
+        - polkit-consolekit
 
 - name: "network"
   description: "Network packages"
