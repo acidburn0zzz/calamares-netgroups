@@ -73,6 +73,7 @@
   selected: true
   critical: false
   packages:
+        - manjaro-release
         - grub
         - os-prober
         - memtest86+
@@ -126,6 +127,19 @@
   critical: false
   packages:
         - plymouth-theme-manjaro-elegant
+
+- name: "firmware"
+  description: "Firmware"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+        - intel-ucode
+        - bluez-firmware
+        - alsa-firmware
+        - b43-fwcutter
+        - ipw2100-fw
+        - ipw2200-fw
 
 - name: "util"
   description: "Utilities packages"
