@@ -73,10 +73,28 @@
   selected: true
   critical: false
   packages:
-        - manjaro-release
         - grub
         - os-prober
         - memtest86+
+        - efibootmgr
+
+- name: "system"
+  description: "System packages"
+  hidden: true
+  selected: true
+  critical: false
+  packages:
+        - dbus
+        - acpid
+        - syslog-ng
+        - cronie
+        - tlp
+        - json-c
+        - manjaro-hotfixes
+        - cpupower
+        - mkinitcpio-openswap
+        - lsb-release
+        - manjaro-release
 
 - name: "network"
   description: "Network packages"
@@ -89,6 +107,13 @@
         - ntp
         - rsync
         - bluez
+        - dhclient
+        - dnsmasq
+        - openssh
+        - mobile-broadband-provider-info
+        - modemmanager
+        - nss-mdns
+        - wpa_supplicant
 
 - name: "base-devel"
   description: "Development packages assumed installed for making packages"
@@ -140,6 +165,24 @@
         - b43-fwcutter
         - ipw2100-fw
         - ipw2200-fw
+        - zd1211-firmware
+        - manjaro-firmware
+        - linux-firmware
+
+- name: 'filesystems'
+  description: 'Extra Filesystems'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+        - btrfs-progs
+        - dosfstools
+        - ecryptfs-utils
+        - exfat-utils
+        - f2fs-tools
+        - nfs-utils-openrc
+        - ntfs-3g
+        - dmraid
 
 - name: "util"
   description: "Utilities packages"
@@ -149,6 +192,14 @@
   packages:
         - yaourt
         - manjaro-tools-base
+        - zsh
+        - cronjobs
+        - acpi
+        - haveged
+        - alsa-utils
+        - crda
+        - powertop
+        - dmidecode
 
 - name: "displaymanager"
   description: "Displaymanager"
@@ -159,6 +210,14 @@
         - sddm
         - sddm-qt-manjaro-theme
         - xorg-server
+        - xdg-su
+        - xdg-user-dirs
+        - xdg-utils
+        - xorg-server
+        - xorg-server-utils
+        - xorg-twm
+        - xorg-utils
+        - xorg-xinit
 
 - name: 'lxqt-basic'
   description: 'lxqt basic'
@@ -187,6 +246,8 @@
        - qterminal
        - juffed-qt5
        - compton
+       - xarchiver
+       - network-manager-applet
        - manjaro-lxqt-basic-settings
 
 - name: 'lxqt-extra'
@@ -204,3 +265,17 @@
        - vlc
        - qpdfview
        - manjaro-lxqt-extra-settings
+
+- name: 'fonts'
+  description: 'Fonts'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - terminus-font
+       - ttf-bitstream-vera
+       - ttf-dejavu
+       - ttf-droid
+       - ttf-inconsolata
+       - ttf-indic-otf
+       - ttf-liberation
