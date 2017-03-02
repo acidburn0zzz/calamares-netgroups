@@ -167,7 +167,6 @@
         - ipw2200-fw
         - zd1211-firmware
         - manjaro-firmware
-        - linux-firmware
 
 - name: 'filesystems'
   description: 'Extra Filesystems'
@@ -200,6 +199,7 @@
         - crda
         - powertop
         - dmidecode
+        - inxi
 
 - name: "displaymanager"
   description: "Displaymanager"
