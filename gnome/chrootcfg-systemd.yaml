@@ -266,6 +266,7 @@
        - transmission-gtk
        - brasero
        - manjaro-documentation
+       - gtk3-print-backends
        - jre8-openjdk
        - jre8-openjdk-headless
        - flashplugin
