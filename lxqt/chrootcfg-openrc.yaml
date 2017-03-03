@@ -251,6 +251,7 @@
        - qterminal
        - juffed-qt5
        - compton
+       - compton-conf
        - xarchiver
        - network-manager-applet
        - manjaro-lxqt-basic-settings
