@@ -87,9 +87,9 @@
         - dbus
         - acpid
         - syslog-ng
+        - json-c
         - cronie
         - tlp
-        - json-c
         - manjaro-hotfixes
         - cpupower
         - lsb-release
@@ -113,7 +113,6 @@
         - modemmanager
         - nss-mdns
 
-
 - name: "base-devel"
   description: "Development packages assumed installed for making packages"
   hidden: false
@@ -125,24 +124,14 @@
         - binutils
         - bison
         - fakeroot
-        - file
-        - findutils
         - flex
-        - gawk
         - gcc
-        - gettext
-        - grep
         - groff
-        - gzip
         - libtool
         - m4
         - make
         - patch
         - pkg-config
-        - sed
-        - texinfo
-        - util-linux
-        - which
 
 - name: "plymouth"
   description: "Plymouth"
