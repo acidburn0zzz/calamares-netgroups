@@ -260,6 +260,7 @@
        - octopi-cachecleaner
        - octopi-repoeditor
        - manjaro-settings-manager
+       - manjaro-settings-manager-notifier
        - xscreensaver
        - xarchiver
        - zip
