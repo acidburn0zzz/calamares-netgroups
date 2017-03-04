@@ -167,7 +167,7 @@
         - ecryptfs-utils
         - exfat-utils
         - f2fs-tools
-        - nfs-utils-openrc
+        - nfs-utils
         - ntfs-3g
         - dmraid
 
