@@ -91,7 +91,6 @@
         - json-c
         - manjaro-hotfixes
         - cpupower
-        - mkinitcpio-openswap
         - lsb-release
         - manjaro-release
 
