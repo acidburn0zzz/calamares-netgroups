@@ -262,9 +262,13 @@
        - manjaro-settings-manager
        - xscreensaver
        - xarchiver
-       - qps
+       - zip
+       - unzip
+       - p7zip
+       - unrar
        - pulseaudio
        - pavucontrol-qt
+       - qps
        - manjaro-printer
        - speedcrunch
        - lximage-qt
