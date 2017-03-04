@@ -108,6 +108,7 @@
         - mobile-broadband-provider-info
         - modemmanager
         - nss-mdns
+        - tcp-wrappers
 
 - name: "base-devel"
   description: "Development packages assumed installed for making packages"
@@ -183,6 +184,7 @@
         - powertop
         - dmidecode
         - inxi
+        - ncdu
 
 - name: "displaymanager"
   description: "Display manager"
@@ -192,7 +194,6 @@
   packages:
         - sddm
         - sddm-qt-manjaro-theme
-        - xorg-server
         - xdg-su
         - xdg-user-dirs
         - xdg-utils
