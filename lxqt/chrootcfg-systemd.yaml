@@ -246,13 +246,15 @@
        - manjaro-lxqt-basic-settings
 
 - name: 'window-manager'
-  description: 'window manager used by lxqt'
+  description: 'window manager - choose openbox (and compton) or kwin'
   selected: false
   hidden: false
   critical: false
   packages:
-       - obconf-qt
        - openbox
+       - obconf-qt
+       - compton
+       - compton-conf
        - kwin
        - systemsettings
 
@@ -262,27 +264,26 @@
   hidden: false
   critical: false
   packages:
-       - lximage-qt
-       - compton
-       - compton-conf
        - gvfs-afc
        - gvfs-smb
        - gvfs-mtp
        - gvfs-gphoto2
-       - qps
-       - speedcrunch
-       - xscreensaver
-       - xarchiver
        - octopi
        - octopi-notifier-qt5
        - octopi-cachecleaner
        - octopi-repoeditor
+       - manjaro-settings-manager
+       - xscreensaver
+       - xarchiver
+       - qps
+       - pulseaudio
+       - pavucontrol-qt
+       - speedcrunch
+       - lximage-qt
        - qupzilla
        - vlc
        - cantata
        - qpdfview
-       - pulseaudio
-       - pavucontrol-qt
        - manjaro-lxqt-extra-settings
 
 - name: 'fonts'
