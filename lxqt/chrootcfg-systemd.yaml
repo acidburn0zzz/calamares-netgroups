@@ -33,8 +33,6 @@
        - man-pages
        - manjaro-system
        - mdadm
-       - mhwd
-       - mhwd-db
        - nano
        - netctl
        - pacman
@@ -47,7 +45,6 @@
        - s-nail
        - sed
        - shadow
-       - sudo
        - sysfsutils
        - systemd-sysvcompat
        - tar
@@ -57,6 +54,10 @@
        - vi
        - which
        - xfsprogs
+       - mhwd
+       - mhwd-db
+       - sudo
+       - tcp-wrappers
 
 - name: "kernel"
   description: "Kernel packages"
@@ -111,7 +112,7 @@
         - mobile-broadband-provider-info
         - modemmanager
         - nss-mdns
-        - tcp-wrappers
+
 
 - name: "base-devel"
   description: "Development packages assumed installed for making packages"
