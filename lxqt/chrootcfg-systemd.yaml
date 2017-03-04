@@ -86,8 +86,6 @@
   packages:
         - dbus
         - acpid
-        - syslog-ng
-        - json-c
         - cronie
         - tlp
         - manjaro-hotfixes
@@ -189,7 +187,7 @@
         - inxi
 
 - name: "displaymanager"
-  description: "Displaymanager"
+  description: "Display manager"
   hidden: false
   selected: false
   critical: false
@@ -253,9 +251,10 @@
   critical: false
   packages:
        - gvfs-afc
-       - gvfs-smb
-       - gvfs-mtp
        - gvfs-gphoto2
+       - gvfs-mtp
+       - gvfs-nfs
+       - gvfs-smb
        - octopi
        - octopi-notifier-qt5
        - octopi-cachecleaner
