@@ -238,17 +238,25 @@
        - lxqt-runner
        - lxqt-session
        - lxqt-sudo
-       - obconf-qt
-       - openbox
        - pcmanfm-qt
        - gvfs
        - qterminal
        - juffed-qt5
-       - compton
-       - compton-conf
-       - xarchiver
        - network-manager-applet
        - manjaro-lxqt-basic-settings
+
+- name: 'window-manager'
+  description: 'window manager - choose openbox (and compton) or kwin'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - openbox
+       - obconf-qt
+       - compton
+       - compton-conf
+       - kwin
+       - systemsettings
 
 - name: 'lxqt-extra'
   description: 'lxqt extra'
@@ -256,13 +264,26 @@
   hidden: false
   critical: false
   packages:
-       - lximage-qt
+       - gvfs-afc
+       - gvfs-smb
+       - gvfs-mtp
+       - gvfs-gphoto2
        - octopi
        - octopi-notifier-qt5
        - octopi-cachecleaner
        - octopi-repoeditor
+       - manjaro-settings-manager
+       - xscreensaver
+       - xarchiver
+       - qps
+       - pulseaudio
+       - pavucontrol-qt
+       - manjaro-printer
+       - speedcrunch
+       - lximage-qt
        - qupzilla
        - vlc
+       - cantata
        - qpdfview
        - manjaro-lxqt-extra-settings
 
@@ -279,3 +300,4 @@
        - ttf-inconsolata
        - ttf-indic-otf
        - ttf-liberation
+       - noto-fonts
