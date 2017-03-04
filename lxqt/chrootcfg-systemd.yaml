@@ -113,7 +113,6 @@
         - modemmanager
         - nss-mdns
         - tcp-wrappers
-        - wpa_supplicant
 
 - name: "base-devel"
   description: "Development packages assumed installed for making packages"
