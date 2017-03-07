@@ -229,6 +229,8 @@
        - gvfs
        - qterminal
        - juffed-qt5
+       - octopi
+       - octopi-notifier-qt5
        - manjaro-lxqt-basic-settings
 
 - name: 'window-manager'
@@ -255,8 +257,6 @@
        - gvfs-mtp
        - gvfs-nfs
        - gvfs-smb
-       - octopi
-       - octopi-notifier-qt5
        - octopi-cachecleaner
        - octopi-repoeditor
        - manjaro-settings-manager

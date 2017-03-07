@@ -253,6 +253,8 @@
        - compton
        - compton-conf
        - xarchiver
+       - octopi
+       - octopi-notifier-qt5
        - network-manager-applet
        - manjaro-lxqt-basic-settings
 
@@ -263,8 +265,6 @@
   critical: false
   packages:
        - lximage-qt
-       - octopi
-       - octopi-notifier-qt5
        - octopi-cachecleaner
        - octopi-repoeditor
        - qupzilla
