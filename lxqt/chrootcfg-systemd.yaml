@@ -1,4 +1,4 @@
-- name: "base"
+- name: "base"                                     # 'base' package group from arch linux, except for last 3 packages
   description: "Command line interface"
   hidden: true
   selected: true
@@ -54,9 +54,9 @@
        - vi
        - which
        - xfsprogs
-       - mhwd
-       - mhwd-db
-       - sudo
+       - mhwd                                      # manjaro-specific
+       - mhwd-db                                   # manjaro-specific
+       - sudo                                      # essential package from 'base-devel' group
 
 - name: "kernel"
   description: "Kernel packages"
@@ -64,14 +64,14 @@
   selected: true
   critical: false
   packages:
-        - linux49
+        - linux49                                  # currently only kernel verion from manjaro-tools.conf is supported! --> do not give user a choice!
 
 - name: "boot"
   description: "Bootloader packages"
   hidden: true
   selected: true
   critical: false
-  packages:
+  packages:                                        # these packages are managed by calamares --> do not give user a choice!
         - grub
         - os-prober
         - memtest86+
@@ -98,11 +98,13 @@
   critical: false
   packages:
         - networkmanager
+        - network-manager-applet
         - avahi
         - ntp
         - rsync
         - bluez
         - dhclient
+        - openresolv
         - dnsmasq
         - openssh
         - mobile-broadband-provider-info
@@ -115,7 +117,7 @@
   hidden: false
   selected: false
   critical: false
-  packages:
+  packages:                                        # 'base-devel' packages from arch linux (minus duplicate packages)
         - autoconf
         - automake
         - binutils
@@ -135,7 +137,7 @@
   hidden: false
   selected: false
   critical: false
-  packages:
+  packages:                                        # not needed for manjaro 17.1 anymore!
         - plymouth-theme-manjaro-elegant
 
 - name: "firmware"
@@ -227,7 +229,6 @@
        - gvfs
        - qterminal
        - juffed-qt5
-       - network-manager-applet
        - manjaro-lxqt-basic-settings
 
 - name: 'window-manager'
@@ -267,6 +268,7 @@
        - p7zip
        - unrar
        - pulseaudio
+       - pulseaudio-alsa
        - pavucontrol-qt
        - qps
        - manjaro-printer
@@ -276,6 +278,8 @@
        - vlc
        - cantata
        - qpdfview
+       - qt5-styleplugins
+       - lxappearance
        - manjaro-lxqt-extra-settings
 
 - name: 'fonts'
