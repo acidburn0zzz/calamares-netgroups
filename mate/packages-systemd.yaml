@@ -1,0 +1,102 @@
+- name: "base-devel"
+  description: "Development packages assumed installed for making packages"
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+        - autoconf
+        - automake
+        - binutils
+        - bison
+        - fakeroot
+        - file
+        - findutils
+        - flex
+        - gawk
+        - gcc
+        - gettext
+        - grep
+        - groff
+        - gzip
+        - libtool
+        - m4
+        - make
+        - patch
+        - pkg-config
+        - sed
+        - sudo
+        - texinfo
+        - util-linux
+        - which
+
+- name: "util"
+  description: "Utilities packages"
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+        - yaourt
+        - manjaro-tools-base
+
+- name: "plymouth"
+  description: "Plymouth"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+        - plymouth-legacy
+        - plymouth-theme-manjaro-elegant
+
+- name: 'mate-extra-manjaro'
+  description: 'mate extra packages suggested'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - gtk3-print-backends
+       - manjaro-documentation
+       - mate-themes
+       - libreoffice-fresh
+       - thunderbird
+       - lollypop
+       - vlc-nightly
+       - empathy
+       - uget
+       - transmission-gtk
+       - brasero
+       - manjaro-documentation
+       - jre8-openjdk
+       - jre8-openjdk-headless
+       - flashplugin
+       - libdvdcss
+       - steam-manjaro
+       - manjaro-printer
+
+- name: 'mate-extra-gtk3'
+  description: 'mate-extra-gtk3'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - atril-gtk3
+       - caja-gksu-gtk3
+       - caja-image-converter-gtk3
+       - caja-open-terminal-gtk3
+       - caja-sendto-gtk3
+       - caja-share-gtk3
+       - caja-wallpaper-gtk3
+       - engrampa
+       - eom-gtk3
+       - mate-applets-gtk3
+       - mate-icon-theme-faenza
+       - mate-media-gtk3
+       - mate-netbook-gtk3
+       - mate-power-manager-gtk3
+       - mate-screensaver-gtk3
+       - mate-sensors-applet-gtk3
+       - mate-system-monitor
+       - mate-terminal
+       - mate-user-share-gtk3
+       - mate-utils-gtk3
+       - mozo
+       - pluma-gtk3
