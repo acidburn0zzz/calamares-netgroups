@@ -200,11 +200,12 @@
         - cronjobs
         - acpi
         - haveged-openrc
-        - alsa-utils-openrc
         - crda
         - powertop
         - dmidecode
         - inxi
+        - zip
+        - unzip
 
 - name: "displaymanager"
   description: "Displaymanager and Xorg"
@@ -255,6 +256,8 @@
        - xarchiver
        - octopi
        - octopi-notifier-qt5
+       - qps
+       - qupzilla
        - network-manager-applet
        - manjaro-lxqt-basic-settings
 
@@ -267,10 +270,16 @@
        - lximage-qt
        - octopi-cachecleaner
        - octopi-repoeditor
-       - qupzilla
        - vlc
        - qpdfview
        - manjaro-lxqt-extra-settings
+       - gvfs-afc
+       - gvfs-gphoto2
+       - gvfs-mtp
+       - gvfs-nfs
+       - gvfs-smb
+       - qt5-styleplugins
+       - lxappearance
 
 - name: 'fonts'
   description: 'Fonts'
@@ -285,3 +294,27 @@
        - ttf-inconsolata
        - ttf-indic-otf
        - ttf-liberation
+       - noto-fonts
+
+- name: 'audio'
+  description: 'Audio'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+        - pulseaudio
+        - pulseaudio-alsa
+        - pavucontrol-qt
+        - gtk3-print-backends
+
+- name: 'printing'
+  description: 'Printing'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+        - bluez-cups
+        - cups
+        - cups-filters
+        - cups-pdf
+        - alsa-utils-openrc
