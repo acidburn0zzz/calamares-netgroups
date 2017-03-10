@@ -79,6 +79,7 @@
         - os-prober
         - memtest86+
         - efibootmgr
+        - intel-ucode
 
 - name: "system"
   description: "System packages"
@@ -164,7 +165,6 @@
   selected: false
   critical: false
   packages:
-        - intel-ucode
         - bluez-firmware
         - alsa-firmware
         - b43-fwcutter
@@ -305,7 +305,7 @@
         - pulseaudio
         - pulseaudio-alsa
         - pavucontrol-qt
-        - gtk3-print-backends
+        - alsa-utils-openrc
 
 - name: 'printing'
   description: 'Printing'
@@ -317,4 +317,4 @@
         - cups
         - cups-filters
         - cups-pdf
-        - alsa-utils-openrc
+        - gtk3-print-backends
