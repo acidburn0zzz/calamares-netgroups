@@ -29,7 +29,7 @@
         - util-linux
         - which
 
-- name: "util"
+- name: "Util"
   description: "Utilities packages"
   selected: false
   hidden: false
@@ -38,7 +38,7 @@
         - yaourt
         - manjaro-tools-base
 
-- name: "plymouth"
+- name: "Plymouth"
   description: "Plymouth"
   hidden: false
   selected: false
@@ -47,8 +47,39 @@
         - plymouth-legacy
         - plymouth-theme-manjaro-elegant
 
-- name: 'mate-extra-manjaro'
-  description: 'mate extra packages suggested'
+- name: 'Office'
+  description: 'Office suite'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - libreoffice-fresh
+
+- name: 'Internet'
+  description: 'Packages for internet'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - chromium
+       - thunderbird
+       - empathy
+       - uget
+       - transmission-gtk
+
+- name: 'Multimedia'
+  description: 'Multimedia packages'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - lollypop
+       - vlc-nightly
+       - brasero
+       - libdvdcss
+
+- name: 'Mate-Extra-Manjaro'
+  description: 'Mate extra packages suggested'
   selected: false
   hidden: false
   critical: false
@@ -56,24 +87,15 @@
        - gtk3-print-backends
        - manjaro-documentation
        - mate-themes
-       - libreoffice-fresh
-       - thunderbird
-       - lollypop
-       - vlc-nightly
-       - empathy
-       - uget
-       - transmission-gtk
-       - brasero
        - manjaro-documentation
        - jre8-openjdk
        - jre8-openjdk-headless
        - flashplugin
-       - libdvdcss
        - steam-manjaro
        - manjaro-printer
 
-- name: 'mate-extra-gtk3'
-  description: 'mate-extra-gtk3'
+- name: 'Mate-Extra-Gtk3'
+  description: 'Mate extra gtk3'
   selected: false
   hidden: false
   critical: false
