@@ -1,4 +1,4 @@
-- name: "base"                                     # 'base' package group from arch linux, except for last 3 packages
+- name: "base"                                     # 'base' package group from arch linux, except for last 2 packages
   description: "Command line interface"
   hidden: true
   selected: true
@@ -55,7 +55,6 @@
        - which
        - xfsprogs
        - mhwd                                      # manjaro-specific
-       - mhwd-db                                   # manjaro-specific
        - sudo                                      # essential package from 'base-devel' group
 
 - name: "kernel"
@@ -86,10 +85,9 @@
         - acpid
         - cronie
         - tlp
-        - manjaro-hotfixes
         - cpupower
-        - lsb-release
         - manjaro-release
+        - manjaro-hotfixes
 
 - name: "network"
   description: "Network packages"
@@ -246,8 +244,8 @@
        - kwin
        - systemsettings
 
-- name: 'lxqt-extra'
-  description: 'lxqt extra'
+- name: 'pcmanfm-qt-extra'
+  description: 'packages, which extend the functionality of pcmanfm-qt'
   selected: false
   hidden: false
   critical: false
@@ -257,29 +255,50 @@
        - gvfs-mtp
        - gvfs-nfs
        - gvfs-smb
-       - octopi-cachecleaner
-       - octopi-repoeditor
-       - manjaro-settings-manager
-       - manjaro-settings-manager-notifier
-       - xscreensaver
        - xarchiver
        - zip
        - unzip
        - p7zip
        - unrar
+       
+- name: 'audio-extra'
+  description: 'audio extra'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
        - pulseaudio
        - pulseaudio-alsa
        - pavucontrol-qt
-       - qps
+       
+- name: 'gtk-theming'
+  description: 'extra theming settings for gtk'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - qt5-styleplugins
+       - lxappearance
+       
+- name: 'lxqt-extra'
+  description: 'extra package for lxqt desktop environment'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - octopi-cachecleaner
+       - octopi-repoeditor
+       - manjaro-settings-manager
+       - manjaro-settings-manager-notifier
+       - xscreensaver
        - manjaro-printer
+       - qps
        - speedcrunch
        - lximage-qt
        - qupzilla
        - vlc
        - cantata
        - qpdfview
-       - qt5-styleplugins
-       - lxappearance
        - manjaro-lxqt-extra-settings
 
 - name: 'fonts'
