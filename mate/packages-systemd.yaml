@@ -100,25 +100,25 @@
   hidden: false
   critical: false
   packages:
-       - atril-gtk3
-       - caja-gksu-gtk3
-       - caja-image-converter-gtk3
-       - caja-open-terminal-gtk3
-       - caja-sendto-gtk3
-       - caja-share-gtk3
-       - caja-wallpaper-gtk3
+       - atril
+       - caja-gksu
+       - caja-image-converter
+       - caja-open-terminal
+       - caja-sendto
+       - caja-share
+       - caja-wallpaper
        - engrampa
-       - eom-gtk3
-       - mate-applets-gtk3
+       - eom
+       - mate-applets
        - mate-icon-theme-faenza
-       - mate-media-gtk3
-       - mate-netbook-gtk3
-       - mate-power-manager-gtk3
-       - mate-screensaver-gtk3
-       - mate-sensors-applet-gtk3
+       - mate-media
+       - mate-netbook
+       - mate-power-manager
+       - mate-screensaver
+       - mate-sensors-applet
        - mate-system-monitor
        - mate-terminal
-       - mate-user-share-gtk3
-       - mate-utils-gtk3
+       - mate-user-share
+       - mate-utils
        - mozo
-       - pluma-gtk3
+       - pluma
