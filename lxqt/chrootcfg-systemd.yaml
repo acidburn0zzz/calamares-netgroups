@@ -291,6 +291,8 @@
   packages:
        - pulseaudio
        - pulseaudio-alsa
+       - lib32-libpulse
+       - lib32-libcanberra-pulse
        - pavucontrol-qt
        
 - name: 'gtk-theming'
@@ -318,7 +320,9 @@
   critical: false
   packages:
        - octopi-cachecleaner
+       - octopi-pacmanhelper
        - octopi-repoeditor
+       - pacmanlogviewer
 
 - name: 'xscreensaver'
   description: 'Simple Screensaver'
@@ -351,6 +355,8 @@
   critical: false
   packages:
        - qpdfview
+       - qpdfview-djvu-plugin
+       - qpdfview-ps-plugin
 
 - name: 'speedcrunch'
   description: 'Calculator'
@@ -375,6 +381,8 @@
   critical: false
   packages:
        - qupzilla
+       - gst-libav 
+       - gst-plugins-good
 
 - name: 'cantata'
   description: 'Music player'
@@ -383,6 +391,8 @@
   critical: false
   packages:
        - cantata
+       - perl-uri
+       - mpd
 
 - name: 'vlc'
   description: 'Media player'
@@ -391,6 +401,10 @@
   critical: false
   packages:
        - vlc
+       - qt4
+       - libcdio
+       - libmtp
+       - libdvdcss
 
 - name: 'libreoffice'
   description: 'Libre Office inclucing language'
@@ -509,9 +523,4 @@
        - libreoffice-still-zh-CN
        - libreoffice-still-zh-TW
        - libreoffice-still-zu
-
-  
-  
-  
-
 
