@@ -1,4 +1,4 @@
-- name: "base"                                     # 'base' package group from arch linux, except for last 2 packages
+- name: "base"                                     # 'base' package group from arch linux, except for last 3 packages
   description: "Command line interface"
   hidden: true
   selected: true
@@ -31,7 +31,6 @@
        - lvm2
        - man-db
        - man-pages
-       - manjaro-system
        - mdadm
        - nano
        - netctl
@@ -54,6 +53,7 @@
        - vi
        - which
        - xfsprogs
+       - manjaro-system                            # manjaro-specific							
        - mhwd                                      # manjaro-specific
        - sudo                                      # essential package from 'base-devel' group
 
