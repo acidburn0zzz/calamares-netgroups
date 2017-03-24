@@ -1,7 +1,7 @@
 - name: "base-devel"
   description: "Development packages assumed installed for making packages"
-  selected: false
   hidden: false
+  selected: false
   critical: false
   packages:
         - autoconf
@@ -9,33 +9,15 @@
         - binutils
         - bison
         - fakeroot
-        - file
-        - findutils
         - flex
-        - gawk
         - gcc
-        - gettext
-        - grep
         - groff
-        - gzip
         - libtool
         - m4
         - make
         - patch
         - pkg-config
-        - sed
-        - sudo
-        - texinfo
-        - util-linux
-        - which
-
-- name: "plymouth"
-  description: "Plymouth"
-  hidden: false
-  selected: false
-  critical: false
-  packages:
-        - plymouth-theme-manjaro-elegant
+        - yaourt
 
 - name: "util"
   description: "Utilities packages"
@@ -43,21 +25,24 @@
   hidden: false
   critical: false
   packages:
-        - yaourt
         - manjaro-tools-base
 
 - name: 'lxqt-extra'
-  description: 'Lxqt extra packages'
+  description: 'lxqt extra'
   selected: false
   hidden: false
   critical: false
   packages:
        - lximage-qt
-       - octopi
-       - octopi-notifier-qt5
        - octopi-cachecleaner
        - octopi-repoeditor
-       - qupzilla
        - vlc
        - qpdfview
        - manjaro-lxqt-extra-settings
+       - gvfs-afc
+       - gvfs-gphoto2
+       - gvfs-mtp
+       - gvfs-nfs
+       - gvfs-smb
+       - qt5-styleplugins
+       - lxappearance

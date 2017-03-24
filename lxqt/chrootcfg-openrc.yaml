@@ -35,14 +35,13 @@
        - manjaro-system
        - mdadm-openrc
        - mhwd
-       - mhwd-db
        - nano
        - netifrc
        - pacman
        - pciutils
        - pcmciautils
        - perl
-       - procps-ng
+       - procps-ng-elogind
        - psmisc
        - reiserfsprogs
        - s-nail
@@ -54,8 +53,9 @@
        - tar
        - texinfo
        - udev-openrc
+       - libusb-nosystemd
        - usbutils
-       - util-linux
+       - util-linux-nosystemd
        - vi
        - which
        - xfsprogs
@@ -88,18 +88,19 @@
   critical: false
   packages:
         - dbus-openrc
-        - cgmanager-openrc
-        - consolekit-openrc
+        - elogind-openrc
         - acpid-openrc
         - syslog-ng-openrc
         - cronie-openrc
-        - pm-utils
         - json-c
         - manjaro-hotfixes
         - cpupower-openrc
         - mkinitcpio-openswap
         - lsb-release
         - manjaro-release
+        - upower-nosystemd
+        - udisks2-elogind
+        - accountsservice-elogind
 
 - name: "network"
   description: "Network packages"
@@ -107,7 +108,6 @@
   selected: true
   critical: false
   packages:
-        - networkmanager-consolekit
         - networkmanager-openrc
         - avahi-openrc
         - ntp-openrc
@@ -120,6 +120,7 @@
         - modemmanager
         - nss-mdns
         - wpa_supplicant-openrc
+        - tcp-wrappers
 
 - name: "base-devel"
   description: "Development packages assumed installed for making packages"
@@ -132,32 +133,15 @@
         - binutils
         - bison
         - fakeroot
-        - file
-        - findutils
         - flex
-        - gawk
         - gcc
-        - gettext
-        - grep
         - groff
-        - gzip
         - libtool
         - m4
         - make
         - patch
         - pkg-config
-        - sed
-        - texinfo
-        - util-linux
-        - which
-
-- name: "plymouth"
-  description: "Plymouth"
-  hidden: false
-  selected: false
-  critical: false
-  packages:
-        - plymouth-theme-manjaro-elegant
+        - yaourt
 
 - name: "firmware"
   description: "Firmware"
@@ -190,14 +174,12 @@
 
 - name: "util"
   description: "Utilities packages"
-  selected: false
+  selected: true
   hidden: false
   critical: false
   packages:
-        - yaourt
         - manjaro-tools-base
         - zsh
-        - cronjobs
         - acpi
         - haveged-openrc
         - crda
@@ -214,12 +196,13 @@
   critical: false
   packages:
         - displaymanager-openrc
-        - sddm-consolekit
+        - sddm-elogind
         - sddm-qt-manjaro-theme
         - xdg-su
-        - xdg-user-dirs
+        - xdg-user-dirs-nosystemd
         - xdg-utils
-        - xorg-server
+        - xorg-server-nosystemd
+        - xf86-input-libinput-nosystemd
         - xorg-server-utils
         - xorg-twm
         - xorg-utils
@@ -314,7 +297,8 @@
   critical: false
   packages:
         - bluez-cups
-        - cups
+        - cups-openrc
+        - cups-nosystemd
         - cups-filters
         - cups-pdf
         - gtk3-print-backends
