@@ -2,7 +2,7 @@
   description: "Command line interface"
   hidden: true
   selected: true
-  critical: false
+  critical: true
   packages:
        - bash
        - bzip2
@@ -61,7 +61,7 @@
   description: "Kernel packages"
   hidden: true
   selected: true
-  critical: false
+  critical: true
   packages:
         - linux49                                  # currently only kernel verion from manjaro-tools.conf is supported! --> do not give user a choice!
 
@@ -69,7 +69,7 @@
   description: "Bootloader packages"
   hidden: true
   selected: true
-  critical: false
+  critical: true
   packages:                                        # these packages are managed by calamares --> do not give user a choice!
         - grub
         - os-prober
@@ -80,7 +80,7 @@
   description: "System packages"
   hidden: true
   selected: true
-  critical: false
+  critical: true
   packages:
         - acpid
         - cronie
@@ -93,7 +93,7 @@
   description: "Network packages"
   hidden: false
   selected: true
-  critical: false
+  critical: true
   packages:
         - networkmanager
         - network-manager-applet
@@ -112,9 +112,9 @@
 
 - name: "base-devel"
   description: "Development packages assumed installed for making packages"
-  hidden: false
   selected: false
-  critical: false
+  hidden: false
+  critical: true
   packages:                                        # 'base-devel' packages from arch linux (minus duplicate packages)
         - autoconf
         - automake
@@ -132,17 +132,17 @@
 
 - name: "plymouth"
   description: "Plymouth"
-  hidden: false
   selected: false
-  critical: false
-  packages:                                        # not needed for manjaro 17.1 anymore!
+  hidden: false
+  critical: true
+  packages:                                        # not needed for manjaro 17.0.1 anymore!
         - plymouth-theme-manjaro-elegant
 
 - name: "firmware"
-  description: "Firmware"
-  hidden: false
+  description: "Firmware support"
   selected: false
-  critical: false
+  hidden: false
+  critical: true
   packages:
         - intel-ucode
         - bluez-firmware
@@ -154,10 +154,10 @@
         - manjaro-firmware
 
 - name: 'filesystems'
-  description: 'Extra Filesystems'
+  description: 'Extra filesystems'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
         - btrfs-progs
         - dosfstools
@@ -168,11 +168,11 @@
         - ntfs-3g
         - dmraid
 
-- name: "util"
-  description: "Utilities packages"
+- name: "utilities"
+  description: "CLI utilities packages"
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
         - yaourt
         - manjaro-tools-base
@@ -190,7 +190,7 @@
   description: 'Fonts'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - terminus-font
        - ttf-bitstream-vera
@@ -202,10 +202,10 @@
        - noto-fonts
 
 - name: "xdg-user-dirs"
-  description: "Automatically create User Directories in your $HOME folder."
-  hidden: false
+  description: "Automatically create User Directories in your $HOME folder"
   selected: false
-  critical: false
+  hidden: false
+  critical: true
   packages:
         - xdg-su
         - xdg-user-dirs
@@ -213,9 +213,9 @@
 
 - name: "displaymanager"
   description: "Display manager"
-  hidden: false
   selected: false
-  critical: false
+  hidden: false
+  critical: true
   packages:
         - sddm
         - sddm-qt-manjaro-theme
@@ -226,10 +226,10 @@
         - xorg-xinit
 
 - name: 'lxqt-basic'
-  description: 'lxqt basic'
+  description: 'Basic LXQt packages'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - lxqt-about
        - lxqt-admin
@@ -254,10 +254,10 @@
        - manjaro-lxqt-basic-settings
 
 - name: 'window-manager'
-  description: 'window manager - choose openbox (and compton) or kwin'
+  description: 'Window manager - choose Openbox (and Compton) or kwin'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - openbox
        - obconf-qt
@@ -267,10 +267,10 @@
        - systemsettings
 
 - name: 'pcmanfm-qt-extra'
-  description: 'packages, which extend the functionality of pcmanfm-qt'
+  description: 'Packages, which extend the functionality of Pcmanfm-qt'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - gvfs-afc
        - gvfs-gphoto2
@@ -284,38 +284,38 @@
        - unrar
        
 - name: 'audio-extra'
-  description: 'audio extra'
+  description: 'Extra audio packages'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - pulseaudio
        - pulseaudio-alsa
        - pavucontrol-qt
        
 - name: 'gtk-theming'
-  description: 'extra theming settings for gtk'
+  description: 'Extra theming settings for GTK'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - qt5-styleplugins
        - lxappearance
 
 - name: 'manjaro-settings-manager'
-  description: 'Offers easy Driver and Kernel Settings.'
+  description: 'Offers easy driver, kernel, and language settings'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - manjaro-settings-manager
        - manjaro-settings-manager-notifier
 
 - name: 'octopi-extra'
-  description: 'packages, which extend the functionality of octopi'
+  description: 'Packages, which extend the functionality of octopi'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - octopi-cachecleaner
        - octopi-pacmanhelper
@@ -326,31 +326,55 @@
   description: 'Simple Screensaver'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - xscreensaver
 
 - name: 'qps'
-  description: 'Simple Task Manager. Shows system resources.'
+  description: 'Simple Task Manager: Shows system resources'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - qps
 
-- name: 'manjaro-printer'
-  description: 'Printer support.'
+- name: 'gparted'
+  description: 'Partition manager'
   selected: false
   hidden: false
-  critical: false
+  critical: true
+  packages:
+       - gparted
+
+- name: 'manjaro-printer'
+  description: 'Printing and printer configuration'
+  selected: false
+  hidden: false
+  critical: true
   packages:
        - manjaro-printer
+       
+- name: "manjaro-documentation"
+  description: "Manjaro User Guide"
+  selected: false
+  hidden: false
+  critical: true
+  packages:
+      - manjaro-documentation
+      
+- name: "manjaro-hello"
+  description: "Manjaro welcome screen for new Manjaro users"
+  selected: false
+  hidden: false
+  critical: true
+  packages:
+      - manjaro-hello
 
 - name: 'qpdfview'
   description: 'Simple PDF viewer'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - qpdfview
        - qpdfview-djvu-plugin
@@ -360,7 +384,7 @@
   description: 'Calculator'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - speedcrunch
 
@@ -368,25 +392,38 @@
   description: 'Simple image viewer and screenshot tool'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - lximage-qt
-
-- name: 'qupzilla'
+       
+- name: 'Web browser'
   description: 'Simple web browser'
   selected: false
   hidden: false
-  critical: false
-  packages:
-       - qupzilla
-       - gst-libav 
-       - gst-plugins-good
+  critical: true
+  subgroups:
+      - name: 'qupzilla'
+        description: 'Simple web browser'
+        packages:
+             - qupzilla
+      - name: "firefox"
+        description: "Mozilla Firefox"
+        packages:
+            - firefox
+      - name: "Palemoon"
+        description: "Palemoon"
+        packages:
+            - palemoon-bin
+      - name: "chromium"
+        description: "Chromium"
+        packages:
+            - chromium
 
 - name: 'cantata'
   description: 'Music player'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - cantata
        - perl-uri
@@ -396,129 +433,36 @@
   description: 'Media player'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - vlc
        - qt4
+
+- name: "Multimedia extra"
+  description: "Additional multimedia packages"
+  selected: false
+  hidden: false
+  critical: true
+  packages:
+       - ffmpeg
+       - ffmpegthumbnailer
+       - gst-libav
+       - gst-plugins-bad
+       - gst-plugins-base
+       - gst-plugins-good
+       - gst-plugins-ugly
+       - gstreamer
+       - flac
        - libcdio
        - libmtp
        - libdvdcss
+       - libbluray
 
 - name: 'libreoffice'
-  description: 'Libre Office inclucing language'
+  description: 'Libre Office inclucing language packages'
   selected: false
   hidden: false
-  critical: false
+  critical: true
   packages:
        - libreoffice-still
-       - libreoffice-still-af
-       - libreoffice-still-am
-       - libreoffice-still-ar
-       - libreoffice-still-as
-       - libreoffice-still-ast
-       - libreoffice-still-be
-       - libreoffice-still-bg
-       - libreoffice-still-bn
-       - libreoffice-still-bn-IN
-       - libreoffice-still-bo
-       - libreoffice-still-br
-       - libreoffice-still-brx
-       - libreoffice-still-bs
-       - libreoffice-still-ca
-       - libreoffice-still-ca-valencia
-       - libreoffice-still-cs
-       - libreoffice-still-cy
-       - libreoffice-still-da
-       - libreoffice-still-de
-       - libreoffice-still-dgo
-       - libreoffice-still-dz
-       - libreoffice-still-el
-       - libreoffice-still-en-GB
-       - libreoffice-still-en-ZA
-       - libreoffice-still-eo
-       - libreoffice-still-es
-       - libreoffice-still-et
-       - libreoffice-still-eu
-       - libreoffice-still-fa
-       - libreoffice-still-fi
-       - libreoffice-still-fr
-       - libreoffice-still-ga
-       - libreoffice-still-gd
-       - libreoffice-still-gl
-       - libreoffice-still-gu
-       - libreoffice-still-he
-       - libreoffice-still-hi
-       - libreoffice-still-hr
-       - libreoffice-still-hu
-       - libreoffice-still-id
-       - libreoffice-still-is
-       - libreoffice-still-it
-       - libreoffice-still-ja
-       - libreoffice-still-ka
-       - libreoffice-still-kk
-       - libreoffice-still-km
-       - libreoffice-still-kmr-Latn
-       - libreoffice-still-kn
-       - libreoffice-still-ko
-       - libreoffice-still-kok
-       - libreoffice-still-ks
-       - libreoffice-still-lb
-       - libreoffice-still-lo
-       - libreoffice-still-lt
-       - libreoffice-still-lv
-       - libreoffice-still-mai
-       - libreoffice-still-mk
-       - libreoffice-still-ml
-       - libreoffice-still-mn
-       - libreoffice-still-mni
-       - libreoffice-still-mr
-       - libreoffice-still-my
-       - libreoffice-still-nb
-       - libreoffice-still-ne
-       - libreoffice-still-nl
-       - libreoffice-still-nn
-       - libreoffice-still-nr
-       - libreoffice-still-nso
-       - libreoffice-still-oc
-       - libreoffice-still-om
-       - libreoffice-still-or
-       - libreoffice-still-pa-IN
-       - libreoffice-still-pl
-       - libreoffice-still-pt
-       - libreoffice-still-pt-BR
-       - libreoffice-still-ro
-       - libreoffice-still-ru
-       - libreoffice-still-rw
-       - libreoffice-still-sa-IN
-       - libreoffice-still-sat
-       - libreoffice-still-sd
-       - libreoffice-still-sdk
-       - libreoffice-still-si
-       - libreoffice-still-sid
-       - libreoffice-still-sk
-       - libreoffice-still-sl
-       - libreoffice-still-sq
-       - libreoffice-still-sr
-       - libreoffice-still-sr-Latn
-       - libreoffice-still-ss
-       - libreoffice-still-st
-       - libreoffice-still-sv
-       - libreoffice-still-sw-TZ
-       - libreoffice-still-ta
-       - libreoffice-still-te
-       - libreoffice-still-tg
-       - libreoffice-still-th
-       - libreoffice-still-tn
-       - libreoffice-still-tr
-       - libreoffice-still-ts
-       - libreoffice-still-tt
-       - libreoffice-still-ug
-       - libreoffice-still-uk
-       - libreoffice-still-uz
-       - libreoffice-still-ve
-       - libreoffice-still-vi
-       - libreoffice-still-xh
-       - libreoffice-still-zh-CN
-       - libreoffice-still-zh-TW
-       - libreoffice-still-zu
 
