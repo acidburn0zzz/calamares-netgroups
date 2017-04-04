@@ -291,8 +291,6 @@
   packages:
        - pulseaudio
        - pulseaudio-alsa
-       - lib32-libpulse
-       - lib32-libcanberra-pulse
        - pavucontrol-qt
        
 - name: 'gtk-theming'
