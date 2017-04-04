@@ -1,92 +1,99 @@
-- name: "base"
-  description: "Command line interface"
-  hidden: true
-  selected: true
+- name: "system"
+  description: "system"
+  hidden: false
+  selected: false
   critical: false
-  packages:
-       - bash
-       - bzip2
-       - coreutils
-       - cryptsetup-openrc
-       - device-mapper-openrc
-       - dhcpcd-openrc
-       - diffutils
-       - e2fsprogs
-       - file
-       - filesystem
-       - findutils
-       - gawk
-       - gcc-libs
-       - gettext
-       - glibc-openrc
-       - grep
-       - gzip
-       - inetutils-openrc
-       - iproute2
-       - iputils
-       - jfsutils
-       - less
-       - libeudev-systemd
-       - licenses
-       - logrotate
-       - lvm2-openrc
-       - man-db
-       - man-pages
-       - manjaro-system
-       - mdadm-openrc
-       - mhwd
-       - nano
-       - netifrc
-       - pacman
-       - pciutils
-       - pcmciautils
-       - perl
-       - procps-ng-elogind
-       - psmisc
-       - reiserfsprogs
-       - s-nail
-       - sed
-       - shadow
-       - sudo
-       - sysfsutils
-       - eudev-systemd
-       - tar
-       - texinfo
-       - udev-openrc
-       - libusb-nosystemd
-       - usbutils
-       - util-linux-nosystemd
-       - vi
-       - which
-       - xfsprogs
-       - tcp_wrappers
+  subgroups:
+  - name: "base"
+    description: "Command line interface"
+    hidden: true
+    selected: true
+    critical: false
+    packages:
+        - bash
+        - bzip2
+        - coreutils
+        - cryptsetup-openrc
+        - device-mapper-openrc
+        - dhcpcd-openrc
+        - diffutils
+        - e2fsprogs
+        - file
+        - filesystem
+        - findutils
+        - gawk
+        - gcc-libs
+        - gettext
+        - glibc-openrc
+        - grep
+        - gzip
+        - inetutils-openrc
+        - iproute2
+        - iputils
+        - jfsutils
+        - less
+        - libeudev-systemd
+        - licenses
+        - logrotate
+        - lvm2-openrc
+        - man-db
+        - man-pages
+        - manjaro-system
+        - mdadm-openrc
+        - mhwd
+        - mkinitcpio-nosystemd
+        - nano
+        - netifrc
+        - pacman
+        - pciutils
+        - pcmciautils-nosystemd
+        - perl
+        - procps-ng-elogind
+        - psmisc
+        - reiserfsprogs
+        - s-nail
+        - sed
+        - shadow
+        - sudo
+        - sysfsutils
+        - eudev-systemd
+        - tar
+        - texinfo
+        - udev-openrc
+        - libusb-nosystemd
+        - usbutils
+        - util-linux-nosystemd
+        - vi
+        - which
+        - xfsprogs
+        - tcp_wrappers
 
-- name: "kernel"
-  description: "Kernel packages"
-  hidden: true
-  selected: true
-  critical: false
-  packages:
+  - name: "kernel"
+    description: "Kernel packages"
+    hidden: true
+    selected: true
+    critical: false
+    packages:
         - linux49
 
-- name: "boot"
-  description: "Bootloader packages"
-  hidden: true
-  selected: true
-  critical: false
-  packages:
+  - name: "boot"
+    description: "Bootloader packages"
+    hidden: true
+    selected: true
+    critical: false
+    packages:
         - grub
         - os-prober
         - memtest86+
         - efibootmgr
         - intel-ucode
 
-- name: "system"
-  description: "System packages"
-  hidden: true
-  selected: true
-  critical: false
-  packages:
+  - name: "base-nosystemd"
+    description: "System packages"
+    hidden: true
+    selected: true
+    critical: false
+    packages:
         - dbus-openrc
         - elogind-openrc
         - acpid-openrc
@@ -102,99 +109,105 @@
         - udisks2-elogind
         - accountsservice-elogind
 
-- name: "network"
-  description: "Network packages"
-  hidden: false
-  selected: true
-  critical: false
-  packages:
-        - networkmanager-openrc
-        - avahi-openrc
-        - ntp-openrc
-        - rsync-openrc
-        - bluez-openrc
-        - dhclient
-        - dnsmasq
-        - openssh-openrc
-        - mobile-broadband-provider-info
-        - modemmanager
-        - nss-mdns
-        - wpa_supplicant-openrc
-        - tcp-wrappers
+  - name: "network"
+    description: "Network packages"
+    hidden: false
+    selected: true
+    critical: false
+    packages:
+            - networkmanager-openrc
+            - avahi-openrc
+            - ntp-openrc
+            - rsync-openrc
+            - bluez-openrc
+            - dhclient
+            - dnsmasq
+            - openssh-openrc
+            - mobile-broadband-provider-info
+            - modemmanager
+            - nss-mdns
+            - wpa_supplicant-openrc
+            - tcp-wrappers
 
-- name: "base-devel"
-  description: "Development packages assumed installed for making packages"
+  - name: "base-devel"
+    description: "Development packages assumed installed for making packages"
+    hidden: false
+    selected: false
+    critical: false
+    packages:
+            - autoconf
+            - automake
+            - binutils
+            - bison
+            - fakeroot
+            - flex
+            - gcc
+            - groff
+            - libtool
+            - m4
+            - make
+            - patch
+            - pkg-config
+            - yaourt
+
+  - name: "firmware"
+    description: "Firmware"
+    hidden: false
+    selected: false
+    critical: false
+    packages:
+            - bluez-firmware
+            - alsa-firmware
+            - b43-fwcutter
+            - ipw2100-fw
+            - ipw2200-fw
+            - zd1211-firmware
+            - manjaro-firmware
+
+  - name: 'filesystems'
+    description: 'Extra Filesystems'
+    selected: false
+    hidden: false
+    critical: false
+    packages:
+            - btrfs-progs
+            - dosfstools
+            - ecryptfs-utils
+            - exfat-utils
+            - f2fs-tools
+            - nfs-utils-openrc
+            - ntfs-3g
+            - dmraid
+
+  - name: "util"
+    description: "Utilities packages"
+    selected: true
+    hidden: false
+    critical: false
+    packages:
+            - manjaro-tools-base
+            - zsh
+            - acpi
+            - haveged-openrc
+            - crda
+            - powertop
+            - dmidecode
+            - inxi
+            - zip
+            - unzip
+
+- name: "desktop"
+  description: "Desktop"
   hidden: false
   selected: false
   critical: false
-  packages:
-        - autoconf
-        - automake
-        - binutils
-        - bison
-        - fakeroot
-        - flex
-        - gcc
-        - groff
-        - libtool
-        - m4
-        - make
-        - patch
-        - pkg-config
-        - yaourt
-
-- name: "firmware"
-  description: "Firmware"
-  hidden: false
-  selected: false
-  critical: false
-  packages:
-        - bluez-firmware
-        - alsa-firmware
-        - b43-fwcutter
-        - ipw2100-fw
-        - ipw2200-fw
-        - zd1211-firmware
-        - manjaro-firmware
-
-- name: 'filesystems'
-  description: 'Extra Filesystems'
-  selected: false
-  hidden: false
-  critical: false
-  packages:
-        - btrfs-progs
-        - dosfstools
-        - ecryptfs-utils
-        - exfat-utils
-        - f2fs-tools
-        - nfs-utils-openrc
-        - ntfs-3g
-        - dmraid
-
-- name: "util"
-  description: "Utilities packages"
-  selected: true
-  hidden: false
-  critical: false
-  packages:
-        - manjaro-tools-base
-        - zsh
-        - acpi
-        - haveged-openrc
-        - crda
-        - powertop
-        - dmidecode
-        - inxi
-        - zip
-        - unzip
-
-- name: "displaymanager"
-  description: "Displaymanager and Xorg"
-  hidden: false
-  selected: false
-  critical: false
-  packages:
+  subgroups:
+  - name: "displaymanager"
+    description: "Displaymanager and Xorg"
+    hidden: false
+    selected: false
+    critical: false
+    packages:
         - displaymanager-openrc
         - sddm-elogind
         - sddm-qt-manjaro-theme
@@ -207,62 +220,61 @@
         - xorg-twm
         - xorg-utils
         - xorg-xinit
+  - name: 'lxqt-basic'
+    description: 'lxqt basic'
+    selected: false
+    hidden: false
+    critical: false
+    packages:
+        - lxqt-about
+        - lxqt-admin
+        - lxqt-common
+        - lxqt-config
+        - lxqt-globalkeys
+        - lxqt-notificationd
+        - lxqt-openssh-askpass
+        - lxqt-panel
+        - lxqt-policykit
+        - lxqt-powermanagement
+        - lxqt-qtplugin
+        - lxqt-runner
+        - lxqt-session
+        - lxqt-sudo
+        - obconf-qt
+        - openbox
+        - pcmanfm-qt
+        - gvfs
+        - qterminal
+        - juffed-qt5
+        - compton
+        - compton-conf
+        - xarchiver
+        - octopi
+        - octopi-notifier-qt5
+        - qps
+        - qupzilla
+        - network-manager-applet
+        - manjaro-lxqt-basic-settings
 
-- name: 'lxqt-basic'
-  description: 'lxqt basic'
-  selected: false
-  hidden: false
-  critical: false
-  packages:
-       - lxqt-about
-       - lxqt-admin
-       - lxqt-common
-       - lxqt-config
-       - lxqt-globalkeys
-       - lxqt-notificationd
-       - lxqt-openssh-askpass
-       - lxqt-panel
-       - lxqt-policykit
-       - lxqt-powermanagement
-       - lxqt-qtplugin
-       - lxqt-runner
-       - lxqt-session
-       - lxqt-sudo
-       - obconf-qt
-       - openbox
-       - pcmanfm-qt
-       - gvfs
-       - qterminal
-       - juffed-qt5
-       - compton
-       - compton-conf
-       - xarchiver
-       - octopi
-       - octopi-notifier-qt5
-       - qps
-       - qupzilla
-       - network-manager-applet
-       - manjaro-lxqt-basic-settings
-
-- name: 'lxqt-extra'
-  description: 'lxqt extra'
-  selected: false
-  hidden: false
-  critical: false
-  packages:
-       - lximage-qt
-       - octopi-cachecleaner
-       - octopi-repoeditor
-       - vlc
-       - qpdfview
-       - manjaro-lxqt-extra-settings
-       - gvfs-afc
-       - gvfs-gphoto2
-       - gvfs-mtp
-       - gvfs-nfs
-       - gvfs-smb
-       - qt5-styleplugins
-       - lxappearance
+  - name: 'lxqt-extra'
+    description: 'lxqt extra'
+    selected: false
+    hidden: false
+    critical: false
+    packages:
+        - lximage-qt
+        - octopi-cachecleaner
+        - octopi-repoeditor
+        - vlc
+        - qpdfview
+        - manjaro-lxqt-extra-settings
+        - gvfs-afc
+        - gvfs-gphoto2
+        - gvfs-mtp
+        - gvfs-nfs
+        - gvfs-smb
+        - qt5-styleplugins
+        - lxappearance
 
 - name: 'fonts'
   description: 'Fonts'
@@ -298,7 +310,5 @@
   packages:
         - bluez-cups
         - cups-openrc
-        - cups-nosystemd
         - cups-filters
         - cups-pdf
-        - gtk3-print-backends
