@@ -1,468 +1,479 @@
-- name: "base"                                     # 'base' package group from arch linux, except for last 3 packages
-  description: "Command line interface"
-  hidden: true
-  selected: true
-  critical: true
-  packages:
-       - bash
-       - bzip2
-       - coreutils
-       - cryptsetup
-       - device-mapper
-       - dhcpcd
-       - diffutils
-       - e2fsprogs
-       - file
-       - filesystem
-       - findutils
-       - gawk
-       - gcc-libs
-       - gettext
-       - glibc
-       - grep
-       - gzip
-       - inetutils
-       - iproute2
-       - iputils
-       - jfsutils
-       - less
-       - licenses
-       - logrotate
-       - lvm2
-       - man-db
-       - man-pages
-       - mdadm
-       - nano
-       - netctl
-       - pacman
-       - pciutils
-       - pcmciautils
-       - perl
-       - procps-ng
-       - psmisc
-       - reiserfsprogs
-       - s-nail
-       - sed
-       - shadow
-       - sysfsutils
-       - systemd-sysvcompat
-       - tar
-       - texinfo
-       - usbutils
-       - util-linux
-       - vi
-       - which
-       - xfsprogs
-       - manjaro-system                            # manjaro-specific							
-       - mhwd                                      # manjaro-specific
-       - sudo                                      # essential package from 'base-devel' group
 
-- name: "kernel"
-  description: "Kernel packages"
-  hidden: true
-  selected: true
-  critical: true
-  packages:
-        - linux49                                  # currently only kernel verion from manjaro-tools.conf is supported! --> do not give user a choice!
-
-- name: "boot"
-  description: "Bootloader packages"
-  hidden: true
-  selected: true
-  critical: true
-  packages:                                        # these packages are managed by calamares --> do not give user a choice!
-        - grub
-        - os-prober
-        - memtest86+
-        - efibootmgr
-
-- name: "system"
-  description: "System packages"
-  hidden: true
-  selected: true
-  critical: true
-  packages:
-        - acpid
-        - cronie
-        - tlp
-        - cpupower
-        - manjaro-release
-        - manjaro-hotfixes
-
-- name: "network"
-  description: "Network packages"
+- name: "manjaro"
+  description: "Base system"
   hidden: false
   selected: true
   critical: true
-  packages:
-        - networkmanager
-        - network-manager-applet
-        - avahi
-        - ntp
-        - rsync
-        - bluez
-        - dhclient
-        - openresolv
-        - dnsmasq
-        - openssh
-        - mobile-broadband-provider-info
-        - modemmanager
-        - nss-mdns
-        - tcp-wrappers
 
-- name: "base-devel"
-  description: "Development packages assumed installed for making packages"
-  selected: false
-  hidden: false
-  critical: true
-  packages:                                        # 'base-devel' packages from arch linux (minus duplicate packages)
-        - autoconf
-        - automake
-        - binutils
-        - bison
-        - fakeroot
-        - flex
-        - gcc
-        - groff
-        - libtool
-        - m4
-        - make
-        - patch
-        - pkg-config
-
-- name: "plymouth"
-  description: "Plymouth"
-  selected: false
-  hidden: false
-  critical: true
-  packages:                                        # not needed for manjaro 17.0.1 anymore!
-        - plymouth-theme-manjaro-elegant
-
-- name: "firmware"
-  description: "Firmware support"
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-        - intel-ucode
-        - bluez-firmware
-        - alsa-firmware
-        - b43-fwcutter
-        - ipw2100-fw
-        - ipw2200-fw
-        - zd1211-firmware
-        - manjaro-firmware
-
-- name: 'filesystems'
-  description: 'Extra filesystems'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-        - btrfs-progs
-        - dosfstools
-        - ecryptfs-utils
-        - exfat-utils
-        - f2fs-tools
-        - nfs-utils
-        - ntfs-3g
-        - dmraid
-
-- name: "utilities"
-  description: "CLI utilities packages"
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-        - yaourt
-        - manjaro-tools-base
-        - zsh
-        - acpi
-        - haveged
-        - alsa-utils
-        - crda
-        - powertop
-        - dmidecode
-        - inxi
-        - ncdu
-
-- name: 'fonts'
-  description: 'Fonts'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - terminus-font
-       - ttf-bitstream-vera
-       - ttf-dejavu
-       - ttf-droid
-       - ttf-inconsolata
-       - ttf-indic-otf
-       - ttf-liberation
-       - noto-fonts
-
-- name: "xdg-user-dirs"
-  description: "Automatically create User Directories in your $HOME folder"
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-        - xdg-su
-        - xdg-user-dirs
-        - xdg-utils
-
-- name: "displaymanager"
-  description: "Display manager"
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-        - sddm
-        - sddm-qt-manjaro-theme
-        - xorg-server
-        - xorg-server-utils
-        - xorg-twm
-        - xorg-utils
-        - xorg-xinit
-
-- name: 'lxqt-basic'
-  description: 'Basic LXQt packages'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - lxqt-about
-       - lxqt-admin
-       - lxqt-common
-       - lxqt-config
-       - lxqt-globalkeys
-       - lxqt-notificationd
-       - lxqt-openssh-askpass
-       - lxqt-panel
-       - lxqt-policykit
-       - lxqt-powermanagement
-       - lxqt-qtplugin
-       - lxqt-runner
-       - lxqt-session
-       - lxqt-sudo
-       - pcmanfm-qt
-       - gvfs
-       - qterminal
-       - juffed-qt5
-       - octopi
-       - octopi-notifier-qt5
-       - manjaro-lxqt-basic-settings
-
-- name: 'window-manager'
-  description: 'Window manager - choose Openbox (and Compton) or kwin'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - openbox
-       - obconf-qt
-       - compton
-       - compton-conf
-       - kwin
-       - systemsettings
-
-- name: 'pcmanfm-qt-extra'
-  description: 'Packages, which extend the functionality of Pcmanfm-qt'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - gvfs-afc
-       - gvfs-gphoto2
-       - gvfs-mtp
-       - gvfs-nfs
-       - gvfs-smb
-       - xarchiver
-       - zip
-       - unzip
-       - p7zip
-       - unrar
-       
-- name: 'audio-extra'
-  description: 'Extra audio packages'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - pulseaudio
-       - pulseaudio-alsa
-       - pavucontrol-qt
-       
-- name: 'gtk-theming'
-  description: 'Extra theming settings for GTK'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - qt5-styleplugins
-       - lxappearance
-
-- name: 'manjaro-settings-manager'
-  description: 'Offers easy driver, kernel, and language settings'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - manjaro-settings-manager
-       - manjaro-settings-manager-notifier
-
-- name: 'octopi-extra'
-  description: 'Packages, which extend the functionality of octopi'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - octopi-cachecleaner
-       - octopi-pacmanhelper
-       - octopi-repoeditor
-       - pacmanlogviewer
-
-- name: 'xscreensaver'
-  description: 'Simple Screensaver'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - xscreensaver
-
-- name: 'qps'
-  description: 'Simple Task Manager: Shows system resources'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - qps
-
-- name: 'gparted'
-  description: 'Partition manager'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - gparted
-
-- name: 'manjaro-printer'
-  description: 'Printing and printer configuration'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - manjaro-printer
-       
-- name: "manjaro-documentation"
-  description: "Manjaro User Guide"
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-      - manjaro-documentation
-      
-- name: "manjaro-hello"
-  description: "Manjaro welcome screen for new Manjaro users"
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-      - manjaro-hello
-
-- name: 'qpdfview'
-  description: 'Simple PDF viewer'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - qpdfview
-       - qpdfview-djvu-plugin
-       - qpdfview-ps-plugin
-
-- name: 'speedcrunch'
-  description: 'Calculator'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - speedcrunch
-
-- name: 'lximage-qt'
-  description: 'Simple image viewer and screenshot tool'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - lximage-qt
-       
-- name: 'Web browser'
-  description: 'Simple web browser'
-  selected: false
-  hidden: false
-  critical: true
   subgroups:
+
+      - name: "base"                                     # 'base' package group from arch linux, except for last 3 packages
+        description: "Command line interface"
+        hidden: false
+        selected: true
+        critical: true
+        packages:
+             - bash
+             - bzip2
+             - coreutils
+             - cryptsetup
+             - device-mapper
+             - dhcpcd
+             - diffutils
+             - e2fsprogs
+             - file
+             - filesystem
+             - findutils
+             - gawk
+             - gcc-libs
+             - gettext
+             - glibc
+             - grep
+             - gzip
+             - inetutils
+             - iproute2
+             - iputils
+             - jfsutils
+             - less
+             - licenses
+             - logrotate
+             - lvm2
+             - man-db
+             - man-pages
+             - mdadm
+             - nano
+             - netctl
+             - pacman
+             - pciutils
+             - pcmciautils
+             - perl
+             - procps-ng
+             - psmisc
+             - reiserfsprogs
+             - s-nail
+             - sed
+             - shadow
+             - sysfsutils
+             - systemd-sysvcompat
+             - tar
+             - texinfo
+             - usbutils
+             - util-linux
+             - vi
+             - which
+             - xfsprogs
+             - manjaro-system                            # manjaro-specific							
+             - mhwd                                      # manjaro-specific
+             - sudo                                      # essential package from 'base-devel' group
+
+      - name: "kernel"
+        description: "Kernel packages"
+        hidden: true
+        selected: true
+        critical: true
+        packages:
+             - linux49                                  # currently only kernel verion from manjaro-tools.conf is supported! --> do not give user a choice!
+
+      - name: "boot"
+        description: "Bootloader packages"
+        hidden: false
+        selected: true
+        critical: true
+        packages:                                        # these packages are managed by calamares --> do not give user a choice!
+             - grub
+             - os-prober
+             - memtest86+
+             - efibootmgr
+
+      - name: "system"
+        description: "System packages"
+        hidden: false
+        selected: true
+        critical: true
+        packages:
+             - acpid
+             - cronie
+             - tlp
+             - cpupower
+             - manjaro-release
+             - manjaro-hotfixes
+
+      - name: "network"
+        description: "Network packages"
+        hidden: false
+        selected: true
+        critical: true
+        packages:
+             - networkmanager
+             - network-manager-applet
+
+      - name: "network-extra"
+        description: "Extra network packages"
+        hidden: false
+        selected: false
+        critical: true
+        packages:
+             - avahi
+             - ntp
+             - rsync
+             - bluez
+             - dhclient
+             - openresolv
+             - dnsmasq
+             - openssh
+             - mobile-broadband-provider-info
+             - modemmanager
+             - nss-mdns
+             - tcp-wrappers
+
+      - name: "base-devel"
+        description: "Enables AUR support with Yaourt"
+        hidden: false
+        selected: false
+        critical: true
+        packages:                                        # 'base-devel' packages from arch linux (minus duplicate packages) and yaourt
+             - autoconf
+             - automake
+             - binutils
+             - bison
+             - fakeroot
+             - flex
+             - gcc
+             - groff
+             - libtool
+             - m4
+             - make
+             - patch
+             - pkg-config
+             - yaourt
+
+      - name: "firmware"
+        description: "Firmware support"
+        hidden: false
+        selected: false
+        critical: true
+        packages:
+             - intel-ucode
+             - bluez-firmware
+             - alsa-firmware
+             - b43-fwcutter
+             - ipw2100-fw
+             - ipw2200-fw
+             - zd1211-firmware
+             - manjaro-firmware
+
+      - name: 'filesystems'
+        description: 'Extra filesystems'
+        hidden: false
+        selected: false
+        critical: true
+        packages:
+             - btrfs-progs
+             - dosfstools
+             - ecryptfs-utils
+             - exfat-utils
+             - f2fs-tools
+             - nfs-utils
+             - ntfs-3g
+             - dmraid
+
+      - name: "utilities"
+        description: "CLI utilities packages"
+        hidden: false
+        selected: false
+        critical: true
+        packages:
+             - manjaro-tools-base
+             - zsh
+             - acpi
+             - haveged
+             - alsa-utils
+             - crda
+             - powertop
+             - dmidecode
+             - inxi
+             - ncdu
+
+
+- name: "desktop"
+  description: "LXQt Desktop"
+  hidden: false
+  selected: true
+  critical: true
+
+  subgroups:
+
+      - name: 'fonts'
+        description: 'Fonts'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - terminus-font
+             - ttf-bitstream-vera
+             - ttf-dejavu
+             - ttf-droid
+             - ttf-inconsolata
+             - ttf-indic-otf
+             - ttf-liberation
+             - noto-fonts
+
+      - name: "xdg-user-dirs"
+        description: "Automatically create User Directories in your $HOME folder"
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+              - xdg-su
+              - xdg-user-dirs
+              - xdg-utils
+
+      - name: "displaymanager"
+        description: "Display manager"
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+              - sddm
+              - sddm-qt-manjaro-theme
+              - xorg-server
+              - xorg-server-utils
+              - xorg-twm
+              - xorg-utils
+              - xorg-xinit
+
+      - name: 'window-manager'
+        description: 'Window manager - choose Openbox (and Compton) or kwin'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - openbox
+             - obconf-qt
+             - compton
+             - compton-conf
+             - kwin
+             - systemsettings
+
+      - name: 'lxqt-basic'
+        description: 'Basic LXQt packages'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - lxqt-about
+             - lxqt-admin
+             - lxqt-common
+             - lxqt-config
+             - lxqt-globalkeys
+             - lxqt-notificationd
+             - lxqt-openssh-askpass
+             - lxqt-panel
+             - lxqt-policykit
+             - lxqt-powermanagement
+             - lxqt-qtplugin
+             - lxqt-runner
+             - lxqt-session
+             - lxqt-sudo
+             - pcmanfm-qt
+             - gvfs
+             - qterminal
+             - juffed-qt5
+             - octopi
+             - octopi-notifier-qt5
+             - manjaro-lxqt-basic-settings
+
+      - name: 'pcmanfm-qt-extra'
+        description: 'Packages, which extend the functionality of Pcmanfm-qt'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - gvfs-afc
+             - gvfs-gphoto2
+             - gvfs-mtp
+             - gvfs-nfs
+             - gvfs-smb
+             - xarchiver
+             - zip
+             - unzip
+             - p7zip
+             - unrar
+       
+      - name: 'audio-extra'
+        description: 'Extra audio packages'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - pulseaudio
+             - pulseaudio-alsa
+             - pavucontrol-qt
+       
+      - name: 'gtk-theming'
+        description: 'Extra theming settings for GTK'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - qt5-styleplugins
+             - lxappearance
+
+      - name: 'manjaro-settings-manager'
+        description: 'Offers easy driver, kernel, and language settings'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - manjaro-settings-manager
+             - manjaro-settings-manager-notifier
+
+      - name: 'octopi-extra'
+        description: 'Packages, which extend the functionality of octopi'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - octopi-cachecleaner
+             - octopi-pacmanhelper
+             - octopi-repoeditor
+             - pacmanlogviewer
+
+      - name: 'xscreensaver'
+        description: 'Simple Screensaver'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - xscreensaver
+
+      - name: 'qps'
+        description: 'Simple Task Manager: Shows system resources'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - qps
+
+
+- name: "programs"
+  description: "Common Programs"
+  hidden: false
+  selected: true
+  critical: true
+
+  subgroups:
+
+      - name: "manjaro-hello"
+        description: "Manjaro welcome screen for new Manjaro users"
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+            - manjaro-hello
+
+      - name: "manjaro-documentation"
+        description: "Manjaro User Guide"
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+            - manjaro-documentation
+
+      - name: 'manjaro-printer'
+        description: 'Printing and printer configuration'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - manjaro-printer
+
       - name: 'qupzilla'
         description: 'Simple web browser'
+        selected: false
+        hidden: false
+        critical: true
         packages:
              - qupzilla
-      - name: "firefox"
-        description: "Mozilla Firefox"
+
+      - name: 'lximage-qt'
+        description: 'Simple image viewer and screenshot tool'
+        selected: false
+        hidden: false
+        critical: true
         packages:
-            - firefox
-      - name: "Palemoon"
-        description: "Palemoon"
+             - lximage-qt
+       
+      - name: 'cantata'
+        description: 'Music player'
+        selected: false
+        hidden: false
+        critical: true
         packages:
-            - palemoon-bin
-      - name: "chromium"
-        description: "Chromium"
+             - cantata
+             - perl-uri
+             - mpd
+
+      - name: 'vlc'
+        description: 'Media player'
+        selected: false
+        hidden: false
+        critical: true
         packages:
-            - chromium
+             - vlc
+             - qt4
 
-- name: 'cantata'
-  description: 'Music player'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - cantata
-       - perl-uri
-       - mpd
+      - name: "multimedia-extra"
+        description: "Additional multimedia packages"
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - ffmpeg
+             - ffmpegthumbnailer
+             - gstreamer
+             - gst-libav
+             - gst-plugins-bad
+             - gst-plugins-base
+             - gst-plugins-good
+             - gst-plugins-ugly
+             - flac
+             - libcdio
+             - libmtp
+             - libdvdcss
+             - libbluray
 
-- name: 'vlc'
-  description: 'Media player'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - vlc
-       - qt4
+      - name: 'libreoffice'
+        description: 'Libre Office inclucing language packages'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - libreoffice-still
 
-- name: "Multimedia extra"
-  description: "Additional multimedia packages"
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - ffmpeg
-       - ffmpegthumbnailer
-       - gst-libav
-       - gst-plugins-bad
-       - gst-plugins-base
-       - gst-plugins-good
-       - gst-plugins-ugly
-       - gstreamer
-       - flac
-       - libcdio
-       - libmtp
-       - libdvdcss
-       - libbluray
+      - name: 'qpdfview'
+        description: 'Simple PDF viewer'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - qpdfview
+             - qpdfview-djvu-plugin
+             - qpdfview-ps-plugin
 
-- name: 'libreoffice'
-  description: 'Libre Office inclucing language packages'
-  selected: false
-  hidden: false
-  critical: true
-  packages:
-       - libreoffice-still
+      - name: 'speedcrunch'
+        description: 'Calculator'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - speedcrunch
+
+      - name: 'gparted'
+        description: 'Partition manager'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - gparted
 
