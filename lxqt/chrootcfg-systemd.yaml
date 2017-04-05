@@ -113,6 +113,11 @@
         selected: false
         critical: true
         packages:
+             - rp-pppoe
+             - networkmanager-openconnect
+             - networkmanager-openvpn
+             - networkmanager-pptp
+             - networkmanager-vpnc
              - avahi
              - ntp
              - rsync
