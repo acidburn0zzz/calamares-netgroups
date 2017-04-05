@@ -202,7 +202,7 @@
 - name: "desktop"
   description: "LXQt Desktop"
   hidden: false
-  selected: true
+  selected: false
   critical: true
 
   subgroups:
@@ -371,7 +371,7 @@
 - name: "programs"
   description: "Common Programs"
   hidden: false
-  selected: true
+  selected: false
   critical: true
 
   subgroups:
@@ -399,6 +399,7 @@
         critical: true
         packages:
              - manjaro-printer
+             - bluez-cups
 
       - name: 'qupzilla'
         description: 'Simple web browser'
