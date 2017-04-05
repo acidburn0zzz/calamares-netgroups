@@ -106,7 +106,6 @@
         critical: true
         packages:
              - networkmanager
-             - network-manager-applet
 
       - name: "network-extra"
         description: "Extra network packages"
@@ -278,6 +277,7 @@
              - juffed-qt5
              - octopi
              - octopi-notifier-qt5
+             - network-manager-applet
              - manjaro-lxqt-basic-settings
 
       - name: 'pcmanfm-qt-extra'
