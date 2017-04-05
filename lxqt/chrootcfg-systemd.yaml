@@ -179,6 +179,9 @@
              - f2fs-tools
              - nfs-utils
              - ntfs-3g
+             - reiserfsprogs
+             - xfsprogs
+             - nilfs-utils
              - dmraid
 
       - name: "utilities"
@@ -390,7 +393,7 @@
         hidden: false
         critical: true
         packages:
-            - manjaro-documentation
+            - manjaro-documentation-en
 
       - name: 'manjaro-printer'
         description: 'Printing and printer configuration'
@@ -463,6 +466,10 @@
         critical: true
         packages:
              - libreoffice-still
+             - languagetool
+             - libreoffice-extension-langeuagetool
+             - sane
+             - gst-plugins-base-libs
 
       - name: 'qpdfview'
         description: 'Simple PDF viewer'
@@ -489,4 +496,14 @@
         critical: true
         packages:
              - gparted
+             - dosfstools
+             - jfsutils
+             - f2fs-tools
+             - btrfs-progs
+             - exfat-utils
+             - ntfs-3g
+             - reiserfsprogs
+             - xfsprogs
+             - nilfs-utils
+             - gpart
 
