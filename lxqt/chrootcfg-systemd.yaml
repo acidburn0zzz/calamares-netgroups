@@ -297,34 +297,6 @@
              - unzip
              - p7zip
              - unrar
-       
-      - name: 'audio-extra'
-        description: 'Extra audio packages'
-        selected: false
-        hidden: false
-        critical: true
-        packages:
-             - pulseaudio
-             - pulseaudio-alsa
-             - pavucontrol-qt
-       
-      - name: 'gtk-theming'
-        description: 'Extra theming settings for GTK'
-        selected: false
-        hidden: false
-        critical: true
-        packages:
-             - qt5-styleplugins
-             - lxappearance
-
-      - name: 'manjaro-settings-manager'
-        description: 'Offers easy driver, kernel, and language settings'
-        selected: false
-        hidden: false
-        critical: true
-        packages:
-             - manjaro-settings-manager
-             - manjaro-settings-manager-notifier
 
       - name: 'octopi-extra'
         description: 'Packages, which extend the functionality of octopi'
@@ -336,6 +308,34 @@
              - octopi-pacmanhelper
              - octopi-repoeditor
              - pacmanlogviewer
+
+      - name: 'audio-extra'
+        description: 'Extra audio packages'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - pulseaudio
+             - pulseaudio-alsa
+             - pavucontrol-qt
+       
+      - name: 'manjaro-settings-manager'
+        description: 'Offers easy driver, kernel, and language settings'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - manjaro-settings-manager
+             - manjaro-settings-manager-notifier
+
+      - name: 'gtk-theming'
+        description: 'Extra theming settings for GTK'
+        selected: false
+        hidden: false
+        critical: true
+        packages:
+             - qt5-styleplugins
+             - lxappearance
 
       - name: 'fonts-extra'
         description: 'Extra fonts'
