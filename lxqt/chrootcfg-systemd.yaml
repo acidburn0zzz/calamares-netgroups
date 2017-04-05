@@ -183,7 +183,7 @@
              - dmraid
 
       - name: "utilities"
-        description: "CLI utilities packages"
+        description: "CLI utilities"
         hidden: false
         selected: false
         critical: true
