@@ -84,6 +84,7 @@
              - os-prober
              - memtest86+
              - efibootmgr
+             - intel-ucode
 
       - name: "system"
         description: "System packages"
@@ -158,7 +159,6 @@
         selected: false
         critical: true
         packages:
-             - intel-ucode
              - bluez-firmware
              - alsa-firmware
              - b43-fwcutter
