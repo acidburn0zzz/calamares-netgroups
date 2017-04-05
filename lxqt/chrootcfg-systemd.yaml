@@ -179,8 +179,6 @@
              - f2fs-tools
              - nfs-utils
              - ntfs-3g
-             - reiserfsprogs
-             - xfsprogs
              - nilfs-utils
              - dmraid
 
@@ -467,7 +465,6 @@
         packages:
              - libreoffice-still
              - languagetool
-             - libreoffice-extension-languagetool
              - sane
              - gst-plugins-base-libs
 
@@ -488,22 +485,4 @@
         critical: true
         packages:
              - speedcrunch
-
-      - name: 'gparted'
-        description: 'Partition manager'
-        selected: false
-        hidden: false
-        critical: true
-        packages:
-             - gparted
-             - dosfstools
-             - jfsutils
-             - f2fs-tools
-             - btrfs-progs
-             - exfat-utils
-             - ntfs-3g
-             - reiserfsprogs
-             - xfsprogs
-             - nilfs-utils
-             - gpart
 
