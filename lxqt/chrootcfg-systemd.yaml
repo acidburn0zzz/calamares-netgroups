@@ -203,7 +203,7 @@
 
 
 - name: "desktop"
-  description: "LXQt Desktop"
+  description: "LXQt desktop"
   hidden: false
   selected: false
   critical: true
@@ -372,7 +372,7 @@
 
 
 - name: "programs"
-  description: "Common Programs"
+  description: "Common programs"
   hidden: false
   selected: false
   critical: true
@@ -460,14 +460,14 @@
              - libbluray
 
       - name: 'libreoffice'
-        description: 'Libre Office inclucing language packages'
+        description: 'Libre Office'
         selected: false
         hidden: false
         critical: true
         packages:
              - libreoffice-still
              - languagetool
-             - libreoffice-extension-langeuagetool
+             - libreoffice-extension-languagetool
              - sane
              - gst-plugins-base-libs
 
