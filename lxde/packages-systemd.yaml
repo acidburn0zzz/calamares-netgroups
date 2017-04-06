@@ -1,0 +1,102 @@
+- name: 'Java'
+  description: 'Java runtime and SDK'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+       - jdk8-openjdk
+       - jre8-openjdk-headless
+       - jre8-openjdk
+        
+- name: 'Printing Support'
+  description: 'Fundamental printing support'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+       - manjaro-printer
+       - gtk3-print-backends
+       - pyqt5-common
+       - python-pillow
+       - python-pip
+       - python-reportlab
+
+- name: 'Extra Fonts'
+  description: 'Additional fonts'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+       - terminus-font
+       - ttf-bitstream-vera
+       - ttf-inconsolata
+       - ttf-indic-otf
+       - ttf-liberation
+       - ttf-droid
+
+- name: 'Extra Themes/Artwork'
+  description: 'Additional themes and backgrounds'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+       - manjaro-wallpapers-17.0
+
+- name: 'Extra Cli Applications'
+  description: 'Some useful and popular command line applications'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+        - powertop
+        - htop
+        - mlocate      
+
+- name: 'Applications/Games'
+  description: 'Games'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+        - steam-manjaro     
+
+- name: 'Office'
+  description: 'Office Suite'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+        - libreoffice-fresh
+
+- name: 'Extra Accessories and System Tools'
+  description: 'Games'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+        - gnome-disk-utility
+        - gnome-user-docs
+        - yelp
+        - menulibre
+        - xfburn
+        - gufw
+ 
+- name: 'Extra Applictions/Internet'
+  description: 'Additional applications which require internet connection'
+  selected: true
+  hidden: false
+  critical: false
+  packages: 
+        - transmission-gtk
+        - pidgin
+        - thunderbird
+
+- name: 'Extra Applications for Media'
+  description: 'Applications for Sound, Video and Images'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+        - guvcview
+        - vlc-nightly
+        - gimp   
