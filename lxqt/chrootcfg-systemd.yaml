@@ -464,7 +464,6 @@
         packages:
              - libreoffice-still
              - languagetool
-             - java-runtime-common
              - sane
              - gst-plugins-base-libs
 
