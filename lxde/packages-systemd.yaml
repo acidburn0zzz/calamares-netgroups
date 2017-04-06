@@ -1,51 +1,25 @@
-- name: "base-devel"
-  description: "Development packages assumed installed for making packages"
+- name: 'Java'
+  description: 'Java runtime and SDK'
   selected: false
   hidden: false
   critical: false
   packages:
-        - autoconf
-        - automake
-        - binutils
-        - bison
-        - fakeroot
-        - file
-        - findutils
-        - flex
-        - gawk
-        - gcc
-        - gettext
-        - grep
-        - groff
-        - gzip
-        - libtool
-        - m4
-        - make
-        - patch
-        - pkg-config
-        - sed
-        - sudo
-        - texinfo
-        - util-linux
-        - which
-
-- name: "Util"
-  description: "Utilities packages"
+        - jdk8-openjdk
+        - jre8-openjdk-headless
+        - jre8-openjdk
+        
+- name: 'Printing Support'
+  description: 'Fundamental printing support'
   selected: false
   hidden: false
   critical: false
   packages:
-        - yaourt
-        - manjaro-tools-base
-
-- name: "Plymouth"
-  description: "Plymouth"
-  hidden: false
-  selected: false
-  critical: false
-  packages:
-        - plymouth-legacy
-        - plymouth-theme-manjaro-elegant
+        - manjaro-printer
+        - gtk3-print-backends
+        - pyqt5-common
+        - python-pillow
+        - python-pip
+        - python-reportlab
 
 - name: 'Office'
   description: 'Office suite'
