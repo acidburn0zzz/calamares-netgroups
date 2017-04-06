@@ -1,0 +1,124 @@
+- name: "base-devel"
+  description: "Development packages assumed installed for making packages"
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+        - autoconf
+        - automake
+        - binutils
+        - bison
+        - fakeroot
+        - file
+        - findutils
+        - flex
+        - gawk
+        - gcc
+        - gettext
+        - grep
+        - groff
+        - gzip
+        - libtool
+        - m4
+        - make
+        - patch
+        - pkg-config
+        - sed
+        - sudo
+        - texinfo
+        - util-linux
+        - which
+
+- name: "Util"
+  description: "Utilities packages"
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+        - yaourt
+        - manjaro-tools-base
+
+- name: "Plymouth"
+  description: "Plymouth"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+        - plymouth-legacy
+        - plymouth-theme-manjaro-elegant
+
+- name: 'Office'
+  description: 'Office suite'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - libreoffice-fresh
+
+- name: 'Internet'
+  description: 'Packages for internet'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - chromium
+       - thunderbird
+       - empathy
+       - uget
+       - transmission-gtk
+
+- name: 'Multimedia'
+  description: 'Multimedia packages'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - lollypop
+       - vlc-nightly
+       - brasero
+       - libdvdcss
+
+- name: 'Mate-Extra-Manjaro'
+  description: 'Mate extra packages suggested'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - gtk3-print-backends
+       - manjaro-documentation
+       - mate-themes
+       - manjaro-documentation
+       - jre8-openjdk
+       - jre8-openjdk-headless
+       - flashplugin
+       - steam-manjaro
+       - manjaro-printer
+
+- name: 'Mate-Extra-Gtk3'
+  description: 'Mate extra gtk3'
+  selected: false
+  hidden: false
+  critical: false
+  packages:
+       - atril
+       - caja-gksu
+       - caja-image-converter
+       - caja-open-terminal
+       - caja-sendto
+       - caja-share
+       - caja-wallpaper
+       - engrampa
+       - eom
+       - mate-applets
+       - mate-icon-theme-faenza
+       - mate-media
+       - mate-netbook
+       - mate-power-manager
+       - mate-screensaver
+       - mate-sensors-applet
+       - mate-system-monitor
+       - mate-terminal
+       - mate-user-share
+       - mate-utils
+       - mozo
+       - pluma
