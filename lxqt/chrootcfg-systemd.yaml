@@ -2,13 +2,12 @@
 - name: "manjaro"
   description: "Base system"
   hidden: false
-  selected: true
   critical: true
 
   subgroups:
 
       - name: "base"                                     # 'base' package group from arch linux, except for last 3 packages
-        description: "Command line interface"
+        description: "Manjaro command line interface"
         hidden: false
         selected: true
         critical: true
@@ -67,19 +66,19 @@
              - sudo                                      # essential package from 'base-devel' group
 
       - name: "kernel"
-        description: "Kernel packages"
+        description: "Kernel"
         hidden: true
         selected: true
         critical: true
         packages:
-             - linux49                                  # currently only kernel verion from manjaro-tools.conf is supported! --> do not give user a choice!
+             - linux49                                   # currently only kernel verion from manjaro-tools.conf is supported! --> do not give user a choice!
 
       - name: "boot"
-        description: "Bootloader packages"
+        description: "GRUB boot loader"
         hidden: false
         selected: true
         critical: true
-        packages:                                        # these packages are managed by calamares --> do not give user a choice!
+        packages:                                        # these packages are also managed by calamares --> user can break installation!
              - grub
              - os-prober
              - memtest86+
@@ -87,7 +86,7 @@
              - intel-ucode
 
       - name: "system"
-        description: "System packages"
+        description: "Basic Manjaro system"
         hidden: false
         selected: true
         critical: true
@@ -100,7 +99,7 @@
              - manjaro-hotfixes
 
       - name: "network"
-        description: "Network packages"
+        description: "Minimal network functionality"
         hidden: false
         selected: true
         critical: true
@@ -132,7 +131,7 @@
              - tcp-wrappers
 
       - name: "base-devel"
-        description: "Enables AUR support with Yaourt"
+        description: "AUR support with Yaourt"
         hidden: false
         selected: false
         critical: true
@@ -153,7 +152,7 @@
              - yaourt
 
       - name: "firmware"
-        description: "Firmware support"
+        description: "Additional firmware support"
         hidden: false
         selected: false
         critical: true
@@ -187,7 +186,7 @@
         hidden: false
         selected: false
         critical: true
-        packages:
+        packages:                                        # user can break installation, if calamares tries to set zsh as default shell but zsh is not installed.
              - manjaro-tools-base
              - zsh
              - acpi
@@ -203,13 +202,12 @@
 - name: "desktop"
   description: "LXQt desktop"
   hidden: false
-  selected: false
   critical: true
 
   subgroups:
 
       - name: "xorg"
-        description: "Xorg"
+        description: "Xorg display server"
         selected: false
         hidden: false
         critical: true
@@ -230,7 +228,7 @@
               - sddm-qt-manjaro-theme
 
       - name: "xdg-user-dirs"
-        description: "Automatically create User Directories in your $HOME folder"
+        description: "Automatically create user directories in your $HOME folder"
         selected: false
         hidden: false
         critical: true
@@ -253,7 +251,7 @@
              - systemsettings
 
       - name: 'lxqt-basic'
-        description: 'Basic LXQt packages'
+        description: 'Basic LXQt desktop environment'
         selected: false
         hidden: false
         critical: true
@@ -282,7 +280,7 @@
              - manjaro-lxqt-basic-settings
 
       - name: 'pcmanfm-qt-extra'
-        description: 'Packages, which extend the functionality of Pcmanfm-qt'
+        description: 'Packages, which extend the functionality of Pcmanfm-qt file manager'
         selected: false
         hidden: false
         critical: true
@@ -299,7 +297,7 @@
              - unrar
 
       - name: 'octopi-extra'
-        description: 'Packages, which extend the functionality of octopi'
+        description: 'Packages, which extend the functionality of Octopi package manager'
         selected: false
         hidden: false
         critical: true
@@ -310,13 +308,15 @@
              - pacmanlogviewer
 
       - name: 'audio-extra'
-        description: 'Extra audio packages'
+        description: 'Pulseaudio with advanced audio support'
         selected: false
         hidden: false
         critical: true
         packages:
              - pulseaudio
-             - pulseaudio-alsa
+             - pulseaudio-bluetooth
+             - pulseaudio-equalizer
+             - pulseaudio-jack
              - pavucontrol-qt
        
       - name: 'manjaro-settings-manager'
@@ -329,7 +329,7 @@
              - manjaro-settings-manager-notifier
 
       - name: 'gtk-theming'
-        description: 'Extra theming settings for GTK'
+        description: 'Theming settings for GTK applications'
         selected: false
         hidden: false
         critical: true
@@ -353,7 +353,7 @@
              - noto-fonts
 
       - name: 'xscreensaver'
-        description: 'Simple Screensaver'
+        description: 'Simple screen saver'
         selected: false
         hidden: false
         critical: true
@@ -361,7 +361,7 @@
              - xscreensaver
 
       - name: 'qps'
-        description: 'Simple Task Manager: Shows system resources'
+        description: 'Simple task manager: Shows system resources'
         selected: false
         hidden: false
         critical: true
@@ -372,7 +372,6 @@
 - name: "programs"
   description: "Common programs"
   hidden: false
-  selected: false
   critical: true
 
   subgroups:
@@ -458,13 +457,14 @@
              - libbluray
 
       - name: 'libreoffice'
-        description: 'Libre Office'
+        description: 'LibreOffice'
         selected: false
         hidden: false
         critical: true
         packages:
              - libreoffice-still
              - languagetool
+             - java-runtime-common
              - sane
              - gst-plugins-base-libs
 
