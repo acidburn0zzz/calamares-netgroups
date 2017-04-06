@@ -1,98 +1,81 @@
 - name: 'Java'
   description: 'Java runtime and SDK'
-  selected: false
+  selected: true
   hidden: false
   critical: false
   packages:
-        - jdk8-openjdk
-        - jre8-openjdk-headless
-        - jre8-openjdk
+       - jdk8-openjdk
+       - jre8-openjdk-headless
+       - jre8-openjdk
         
 - name: 'Printing Support'
   description: 'Fundamental printing support'
-  selected: false
+  selected: true
   hidden: false
   critical: false
   packages:
-        - manjaro-printer
-        - gtk3-print-backends
-        - pyqt5-common
-        - python-pillow
-        - python-pip
-        - python-reportlab
-
-- name: 'Office'
-  description: 'Office suite'
-  selected: false
-  hidden: false
-  critical: false
-  packages:
-       - libreoffice-fresh
-
-- name: 'Internet'
-  description: 'Packages for internet'
-  selected: false
-  hidden: false
-  critical: false
-  packages:
-       - chromium
-       - thunderbird
-       - empathy
-       - uget
-       - transmission-gtk
-
-- name: 'Multimedia'
-  description: 'Multimedia packages'
-  selected: false
-  hidden: false
-  critical: false
-  packages:
-       - lollypop
-       - vlc-nightly
-       - brasero
-       - libdvdcss
-
-- name: 'Mate-Extra-Manjaro'
-  description: 'Mate extra packages suggested'
-  selected: false
-  hidden: false
-  critical: false
-  packages:
-       - gtk3-print-backends
-       - manjaro-documentation
-       - mate-themes
-       - manjaro-documentation
-       - jre8-openjdk
-       - jre8-openjdk-headless
-       - flashplugin
-       - steam-manjaro
        - manjaro-printer
+       - gtk3-print-backends
+       - pyqt5-common
+       - python-pillow
+       - python-pip
+       - python-reportlab
 
-- name: 'Mate-Extra-Gtk3'
-  description: 'Mate extra gtk3'
-  selected: false
+- name: 'Extra Fonts'
+  description: 'Additional fonts'
+  selected: true
   hidden: false
   critical: false
   packages:
-       - atril
-       - caja-gksu
-       - caja-image-converter
-       - caja-open-terminal
-       - caja-sendto
-       - caja-share
-       - caja-wallpaper
-       - engrampa
-       - eom
-       - mate-applets
-       - mate-icon-theme-faenza
-       - mate-media
-       - mate-netbook
-       - mate-power-manager
-       - mate-screensaver
-       - mate-sensors-applet
-       - mate-system-monitor
-       - mate-terminal
-       - mate-user-share
-       - mate-utils
-       - mozo
-       - pluma
+       - terminus-font
+       - ttf-bitstream-vera
+       - ttf-inconsolata
+       - ttf-indic-otf
+       - ttf-liberation
+       - ttf-droid
+
+- name: 'Extra Themes/Artwork'
+  description: 'Additional themes and backgrounds'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+       - manjaro-wallpapers-17.0
+
+- name: 'Extra Cli Applications'
+  description: 'Some useful and popular command line applications'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+        - powertop
+        - htop
+        - mlocate
+        
+
+- name: 'Applications/Games'
+  description: 'Additional fonts'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+        - steam-manjaro
+
+- name: 'Extra Applications'
+  description: 'Additional applications'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+        - gufw
+        - guvcview
+        - gnome-disk-utility
+        - transmission-gtk
+        - gimp
+        - libreoffice-fresh
+        - pidgin
+        - vlc-nightly
+        - thunderbird
+        - xfburn
+        - yelp
+        - menulibre
