@@ -21,6 +21,14 @@
        - python-pip
        - python-reportlab
 
+- name: 'Scanner Support'
+  description: 'Support for scanners'
+  selected: true
+  hidden: false
+  critical: false
+  packages:
+        - simple-scan
+
 - name: 'Extra Fonts'
   description: 'Additional fonts'
   selected: true
