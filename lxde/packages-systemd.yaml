@@ -77,7 +77,7 @@
         - libreoffice-fresh
 
 - name: 'Extra Accessories and System Tools'
-  description: 'Games'
+  description: 'Some useful accessories, utilities and system tools'
   selected: true
   hidden: false
   critical: false
